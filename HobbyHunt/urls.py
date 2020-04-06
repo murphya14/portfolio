@@ -27,5 +27,5 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^$', index, name="index"),
     url(r'^accounts/logout/$', logout, name="logout"),
-
+    url(r'^accounts/login/$', login, name="login"),
 ]
