@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from accounts.views import index, logout 
+from accounts.views import index, logout, login, registration, user_profile
 from django.views.generic import RedirectView
 from django.views.static import serve
 from .settings import MEDIA_ROOT
@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^accounts/logout/$', logout, name="logout"),
     url(r'^accounts/login/$', login, name="login"),
     url(r'^accounts/register/$', registration, name="registration"),
+    url(r'^accounts/profile/$', user_profile, name="profile"),
 ]
