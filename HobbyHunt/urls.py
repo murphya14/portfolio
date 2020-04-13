@@ -25,6 +25,7 @@ from hobby_product import urls as urls_hobby_product
 from cart import urls as urls_cart
 from hobby_product.views import all_products
 from search import urls as urls_search
+from checkout import urls as urls_checkout
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -38,6 +39,7 @@ urlpatterns = [
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_hobby_product)),
     url(r'^cart/', include(urls_cart)),
+    url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]
