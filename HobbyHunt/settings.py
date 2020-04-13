@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'posts',
     'accounts',
     'hobby_product',
+    'cart', 
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.cotext_processors.media',
+                'cart.contexts.cart_contents',
             ],
         },
     },
