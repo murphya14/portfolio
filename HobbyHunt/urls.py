@@ -23,7 +23,7 @@ from accounts import urls as accounts_urls
 from accounts.views import index
 from hobby_product import urls as urls_hobby_product
 from cart import urls as urls_cart
-from hobby_product.views import all_products
+from hobby_product.views import all_hobby_products
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from django.views import static
