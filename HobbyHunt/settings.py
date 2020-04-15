@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['hobbyhunt.herokuapp.com']
+ALLOWED_HOSTS = ['hobbyhunt.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'hobby_product',
     'cart', 
     'checkout',
-    'localhost'
+    
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.cotext_processors.media',
+                'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
             ],
         },

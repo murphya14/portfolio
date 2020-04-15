@@ -12,12 +12,14 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
-    product_count = 0
+    hobby_product_count = 0
     
     for id, quantity in cart.items():
-        product = get_object_or_404(hobby_product, pk=id)
+        hobby_product = get_object_or_404(hobby_product, pk=id)
         total += quantity * hobby_product.price
         hobby_product_count += quantity
         cart_items.append({'id': id, 'quantity': quantity, 'product': hobby_product})
     
     return {'cart_items': cart_items, 'total': total, 'product_count': hobby_product_count}
+
+
