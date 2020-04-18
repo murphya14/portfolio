@@ -19,6 +19,7 @@ from accounts.views import index, logout, login, registration, user_profile
 from django.views.generic import RedirectView
 from django.views.static import serve
 from .settings import MEDIA_ROOT
+from auction import urls as auction_urls
 from accounts import urls as accounts_urls
 from accounts.views import index
 from hobby_product import urls as urls_hobby_product
