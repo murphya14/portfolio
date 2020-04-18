@@ -38,6 +38,7 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^$', index, name="index"),
     url(r'^accounts/', include(accounts_urls)),
+    url(r'^auctions/', include(auctions_urls)),
     url(r'^products/', include(urls_hobby_product)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
