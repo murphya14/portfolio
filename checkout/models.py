@@ -1,5 +1,5 @@
 from django.db import models
-from hobby_product.models import hobby_product
+from auction.models import hobby_product
 
 # Create your models here.
 class Order(models.Model):

@@ -46,22 +46,13 @@
                      </a>
                   </li>
                   <li><a href="{% url 'index' %}">Auction</a></li>
-                  <li><a href="{% url 'all_hobby_products' %}">Find a Hobby</a></li>
+                <li><a href="{% url 'all_hobby_products' %}">Find a Hobby</a></li>
                </ul>
             </div>
          </div>
       </nav>
-      <div id="masthead">
-         <div class="container">
-            <div class="row">
-               <h1>
-                  stack
-                  <p id="logo" class="lead">The Trials of a Bootcamp Developer</p>
-               </h1>
-            </div>
-         </div>
-      </div>
-      <div class="container">
+
+      <div class="container main">
          <div class="row">
             <div class="col-md-12">
                <div class="panel">
@@ -86,7 +77,7 @@
       </div>
       {% endif %}
       <div class="container">
-         <div class="display">
+         <div class="search">
             <form action="{% url 'search' %}" method="get">
                <input type="text" name="q">
                <button type="search">Search</button>

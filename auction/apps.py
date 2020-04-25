@@ -6,3 +6,7 @@ from django.apps import AppConfig
 
 class AuctionConfig(AppConfig):
     name = 'auction'
+
+class HobbyProductConfig(AppConfig):
+    name = 'hobby_product'
+

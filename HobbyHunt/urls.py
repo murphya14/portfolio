@@ -21,10 +21,8 @@ from django.views.static import serve
 from .settings import MEDIA_ROOT
 from accounts import urls as accounts_urls
 from accounts.views import index
-from hobby_product import urls as urls_hobby_product
 from auction import urls as urls_auction
 from cart import urls as urls_cart
-from hobby_product.views import all_hobby_products
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from django.views import static
@@ -39,7 +37,6 @@ urlpatterns = [
     url(r'^$', index, name="index"),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^auctions/', include(urls_auction)),
-    url(r'^products/', include(urls_hobby_product)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),

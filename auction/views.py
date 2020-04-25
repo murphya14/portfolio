@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime, timezone
 from django.urls import reverse
 
-from .models import Auction, Bid
+from .models import Auction, Bid, hobby_product
 from .forms import ImageUploadForm
 
 # Main page
@@ -26,6 +26,10 @@ def index(request):
         'auction_list': latest_auction_list,
     }
     return HttpResponse(template.render(context, request))
+
+def all_hobby_products(request):
+    hobby_products = hobby_product.objects.all()
+    return render(request, reverse, "hobby_product.html", {"products": hobby_products})
 
 def auctions(request):
     # Get all auctions, newest first

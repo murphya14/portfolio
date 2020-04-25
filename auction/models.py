@@ -7,6 +7,13 @@ from django.contrib.auth.models import User
 from datetime import timedelta, datetime, timezone
 from math import ceil
 
+class hobby_product(models.Model):
+    name = models.CharField(max_length=254, default='')
+    description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(upload_to='images')
+
+
 # Auction duration in minutes
 AUCTION_DURATION = 5
 
