@@ -27,9 +27,9 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def all_hobby_products(request):
+def auction_hobby_product(request):
     hobby_products = hobby_product.objects.all()
-    return render(request, reverse, "hobby_product.html", {"products": hobby_products})
+    return render(request, "hobby_product.html", {"hobby_products": hobby_products})
 
 def auctions(request):
     # Get all auctions, newest first

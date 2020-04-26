@@ -23,6 +23,7 @@ from accounts import urls as accounts_urls
 from accounts.views import index
 from auction import urls as urls_auction
 from cart import urls as urls_cart
+from posts import urls as urls_posts
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from django.views import static
@@ -32,11 +33,11 @@ from .settings import MEDIA_ROOT
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', RedirectView.as_view(url='posts/')),
-    url(r'^posts/', include('posts.urls')),
+    url(r'^posts/', include(urls_posts)),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^$', index, name="index"),
     url(r'^accounts/', include(accounts_urls)),
-    url(r'^auctions/', include(urls_auction)),
+    url(r'^auctions/', include(urls_auction, namespace='Auctions')),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),

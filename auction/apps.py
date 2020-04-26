@@ -8,5 +8,5 @@ class AuctionConfig(AppConfig):
     name = 'auction'
 
 class HobbyProductConfig(AppConfig):
-    name = 'hobby_product'
+    name = 'auction_hobby_product'
 
