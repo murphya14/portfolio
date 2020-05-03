@@ -8,22 +8,46 @@ from datetime import timedelta, datetime, timezone
 from math import ceil
 
 class hobby_product(models.Model):
+
+    ARTS_AND_CRAFT = 'Arts & Craft'
+    MUSIC = 'music'
+    GAMES = 'games'
+    COLLECTORS = 'collectors'
+    ACADEMIC = 'academic'
+    NONE = 'NUL'
+    SPORT = 'sport and outdoors'
+    CATEGORIES = (
+        (NONE, 'Select a category'),
+        (MUSIC, 'Music'),
+        (GAMES, 'Games'),
+        (COLLECTORS, 'Collectors'),
+        (SPORT, 'Sport & outdoors'),
+        (ACADEMIC, 'Academic & Educational')
+    )
+
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='images')
+    category = models.CharField(max_length=11, choices=CATEGORIES, blank=False)
+    date_added = models.DateTimeField()
+ 
+    class Meta:
+        hobby_product.objects.order_by('name', 'date_added')
+        verbose_name_plural = "Hobby Products"
 
+    '''Create a str of the model'''
+    def __str__(self):
+            return "Lot " + str(self.pk) + " " + self.name
 
 # Auction duration in minutes
 AUCTION_DURATION = 5
 
 class Auction(models.Model):
+    hobby_product = models.ForeignKey(hobby_product, unique=True, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=300)
-    desc = models.CharField(max_length=2000, blank=True)
-    image = models.ImageField(upload_to='auction_images/', blank=True, default = 'auction_images/default/default.svg')
+    description = models.CharField(max_length=2000, blank=True)
     min_value = models.IntegerField()
-    date_added = models.DateTimeField()
     is_active = models.BooleanField(default=True)
     winner = models.ForeignKey(User, on_delete=models.SET("(deleted)"),
                                blank=True,
@@ -64,9 +88,25 @@ class Auction(models.Model):
         else:
             return(0)
 
+    class Meta:
+        ordering = ['-id']
+        verbose_name_plural = "Auctions"
+
+        """ Create a string of the model """
+    def __str__(self):
+        
+        return "Auction " + str(self.pk) + " Hobby Product " + str(self.hobby_product.pk) + " " + self.hobby_product.name
+
 class Bid(models.Model):
     bidder = models.ForeignKey(User, on_delete=models.CASCADE)
     auction = models.ForeignKey(Auction, on_delete=models.CASCADE)
-    amount = models.IntegerField()
+    amount = models.DecimalField(max_digits=9, decimal_places=2, default=0)
     # is_cancelled = models.BooleanField(default=False)
     date = models.DateTimeField('when the bid was made')
+
+    class Meta:
+        verbose_name_plural = 'Bids'
+
+        """ Create a string of the model """
+    def __str__(self):
+        return "Bid " + str(self.pk) + " Auction " + str(self.auction.pk) + " " + self.auction.hobby_product.name
