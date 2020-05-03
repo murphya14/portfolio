@@ -33,7 +33,7 @@ class hobby_product(models.Model):
     date_added = models.DateTimeField()
  
     class Meta:
-        hobby_product.objects.order_by('name', 'date_added')
+        ordering = ['-id']
         verbose_name_plural = "Hobby Products"
 
     '''Create a str of the model'''
@@ -44,7 +44,7 @@ class hobby_product(models.Model):
 AUCTION_DURATION = 5
 
 class Auction(models.Model):
-    hobby_product = models.ForeignKey(hobby_product, unique=True, on_delete=models.CASCADE)
+    hobby_product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=2000, blank=True)
     min_value = models.IntegerField()
