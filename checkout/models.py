@@ -21,8 +21,7 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
     product = models.ForeignKey(Auction, null=False)
-    quantity = models.IntegerField(blank=False)
 
     def __str__(self):
-        return "{0} {1} @ {2}".format(
-            self.quantity, self.auction.name, self.auction.final_value)
+        return "{0} @ {1}".format(
+            self.auction.name, self.auction.final_value)

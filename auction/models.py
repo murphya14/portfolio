@@ -16,20 +16,22 @@ class hobby_product(models.Model):
     ACADEMIC = 'academic'
     NONE = 'NUL'
     SPORT = 'sport and outdoors'
+    OTHER = 'other'
     CATEGORIES = (
         (NONE, 'Select a category'),
         (MUSIC, 'Music'),
         (GAMES, 'Games'),
         (COLLECTORS, 'Collectors'),
         (SPORT, 'Sport & outdoors'),
-        (ACADEMIC, 'Academic & Educational')
+        (ACADEMIC, 'Academic & Educational'),
+        (OTHER, 'other')
     )
 
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='images')
-    category = models.CharField(max_length=11, choices=CATEGORIES, blank=False)
+    category = models.CharField(max_length=100, choices=CATEGORIES, blank=False)
     date_added = models.DateTimeField()
  
     class Meta:
@@ -38,7 +40,7 @@ class hobby_product(models.Model):
 
     '''Create a str of the model'''
     def __str__(self):
-            return "Lot " + str(self.pk) + " " + self.name
+            return "Product " + str(self.pk) + " " + self.name
 
 # Auction duration in minutes
 AUCTION_DURATION = 5
