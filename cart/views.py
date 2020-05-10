@@ -41,8 +41,6 @@ def adjust_cart(request, auction_id):
     """
     auction = get_object_or_404(Auction, pk=auction_id)
     user_default = get_object_or_404(User, pk=1)
-
-    auction = request.POST.get('auction.hobby_product')
     cart = request.session.get('cart', {})
 
     if auction:
