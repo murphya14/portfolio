@@ -21,7 +21,7 @@ def checkout(request):
     total = 0 
 
     for auction in auctions:
-        total += auction.winning_bid
+        total = auction.winning_bid
 
     if request.method == "POST":
         order_form = OrderForm(request.POST)
@@ -36,7 +36,7 @@ def checkout(request):
             total = 0
             for auction in cart.items():
                 auction = get_object_or_404(auction, pk=id)
-                total += hobby_product.price
+                total = auction.winning_bid
                 order_line_item = OrderLineItem(
                     order=order,
                     auction=auction,
