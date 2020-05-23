@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'cart', 
     'checkout',
     'auction',
+    'django_extensions',
+    'search'
     
 ]
 
