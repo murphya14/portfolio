@@ -12,6 +12,8 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=40, blank=False)
     county = models.CharField(max_length=40, blank=False)
     date = models.DateField()
+    payment_id = models.CharField(max_length=250, default="00000")
+    total = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
 
 
     def __str__(self):

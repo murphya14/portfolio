@@ -21,29 +21,28 @@ def checkout(request):
     total = 0 
 
     for auction in auctions:
-        total = auction.winning_bid
-
+        total += auction.winning_bid
+        
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
 
         if order_form.is_valid() and payment_form.is_valid():
-            order = order_form.save(commit=False)
-            order.date = timezone.now()
-            order.save()
-
-            cart = request.session.get('cart', {})
-            total = 0
-            for auction in cart.items():
-                auction = get_object_or_404(auction, pk=id)
-                total = auction.winning_bid
-                order_line_item = OrderLineItem(
-                    order=order,
-                    auction=auction,
-                )
-                order_line_item.save()
             
             try:
+                order = order_form.save(commit=False)
+                order.date = timezone.now()
+                order.save()
+                cart = request.session.get('cart', {})
+                total = 0
+                for auction in cart.items():
+                    auction = get_object_or_404(auction, pk=id)
+                    total = auction.winning_bid
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        auction=auction,
+                    )
+                order_line_item.save()
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
                     currency="EUR",
