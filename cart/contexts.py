@@ -1,11 +1,6 @@
 
 from django.shortcuts import get_object_or_404
-from auction.models import hobby_product, Auction
-
-
-from django.shortcuts import get_object_or_404
 from auction.models import hobby_product
-
 
 def cart_contents(request):
     """
@@ -16,11 +11,12 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
-
+    hobby_product_count = 0
     
-    for id in cart.items():
+    for id, quantity in cart.items():
         hobby_product = get_object_or_404(hobby_product, pk=id)
-        total = hobby_product.winning_bid
-        cart_items.append({'id': id, 'product': hobby_product})
+        total += quantity * hobby_product.price
+        hobby_product_count += quantity
+        cart_items.append({'id': id, 'quantity': quantity, 'product': hobby_product})
     
-    return {'cart_items': cart_items, 'total': total}
+    return {'cart_items': cart_items, 'total': total, 'product_count': hobby_product_count}

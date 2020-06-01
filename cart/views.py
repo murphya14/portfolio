@@ -5,53 +5,37 @@ from django.contrib.auth.models import User
 from auction.models import Auction, Bid
 from django.contrib.auth.decorators import login_required
 
+from django.shortcuts import render, redirect, reverse
+
 # Create your views here.
-@login_required
 def view_cart(request):
     """A View that renders the cart contents page"""
-    user = auth.get_user(request)
-    auctions = Auction.objects.filter(winner=user).filter(paid=False)
-    total = 0 
+    return render(request, "cart.html")
 
-    for auction in auctions:
-        total += auction.winning_bid
-    
-    context = {
-        'auctions': auctions,
-        'total': total
-    }
-    return render(request, "cart.html", context)
 
-@login_required
-def add_to_cart(request, auction_id):
+def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
-    auction = get_object_or_404(Auction, pk=auction_id)
+    quantity = int(request.POST.get('quantity'))
 
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id, auction)
+    cart[id] = cart.get(id, quantity)
 
     request.session['cart'] = cart
     return redirect(reverse('index'))
 
-@login_required
-def adjust_cart(request, auction_id):
+
+def adjust_cart(request, id):
     """
     Adjust the quantity of the specified product to the specified
     amount
     """
-    auction = get_object_or_404(Auction, pk=auction_id)
-    user_default = get_object_or_404(User, pk=1)
+    quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
 
-    if auction:
-        auction.winner = user_default
-        auction.save()
-        messages.success(request, 'Product {0} was removed from the cart'.format(auction.hobby_product))
-        return redirect('view_cart')
+    if quantity > 0:
+        cart[id] = quantity
     else:
-        messages.error(request, 'Sorry we are unable remove this form your cart')
-        return redirect('view_cart')
+        cart.pop(id)
     
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-

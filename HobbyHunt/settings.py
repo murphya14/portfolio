@@ -50,9 +50,9 @@ INSTALLED_APPS = [
     'accounts',
     'cart', 
     'checkout',
-    'auction',
+    'hobby_product',
     'django_extensions',
-    'search'
+    'search',
     
 ]
 
