@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5 py-5 z-depth-1">
+    {% for product in hobby_product %}
+
+  <!--Section: Content-->
+  <section class="text-center">
+
+    <!-- Section heading -->
+    <h3 class="font-weight-bold mb-5">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+
+    <div class="row">
+      <div class="col-lg-6">
+
+        </div>
+        <!--/.Image-->
+        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+      <div class="col-lg-5 text-center text-md-left">
+
+        <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">iPad PRO</h2>
+        <span class="badge badge-danger product mb-4 ml-xl-0 ml-4">bestseller</span>
+        <span class="badge badge-success product mb-4 ml-2">SALE</span>
+
+        <h3 class="h3-responsive text-center text-md-left mb-5 ml-xl-0 ml-4">
+          <span class="red-text font-weight-bold">
+            <strong>{{ product.price }}</strong>
+          </span>
+          <span class="grey-text">
+            <small>
+              <s>{{ product.price }}</s>
+            </small>
+          </span>
+        </h3>
+
+        <div class="font-weight-normal">
+          
+          <p class="ml-xl-0 ml-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nesciunt atque nemo neque ut officiis nostrum incidunt maiores, magni optio et sunt suscipit iusto nisi totam quis, nobis mollitia necessitatibus.</p>
+
+          <p class="ml-xl-0 ml-4">
+            <strong>Storage: </strong>64GB</p>
+          <p class="ml-xl-0 ml-4">
+            <strong>Size: </strong>9.6-inch</p>
+          <p class="ml-xl-0 ml-4">
+            <strong>Resolution: </strong>2048 x 1536</p>
+          <p class="ml-xl-0 ml-4">
+            <strong>Availability: </strong>In stock</p>
+          
+          <div class="mt-5">
+            <p class="grey-text">Choose your color</p>
+            <div class="row text-center text-md-left">
+              <div class="col-md-4 col-12 ">
+                <div class="form-group">
+                  <input class="form-check-input" name="group100" type="radio" id="radio100" checked="checked">
+                  <label for="radio100" class="form-check-label dark-grey-text">White</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input class="form-check-input" name="group100" type="radio" id="radio101">
+                  <label for="radio101" class="form-check-label dark-grey-text">Silver</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input class="form-check-input" name="group100" type="radio" id="radio102">
+                  <label for="radio102" class="form-check-label dark-grey-text">Gold</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col-md-12 text-center text-md-left text-md-right">
+               <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary btn-rounded" type="submit">
+                             <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to cart</button>
+                        </span>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!--Section: Content-->
+
+
+</div>
+
+{% endblock %}
