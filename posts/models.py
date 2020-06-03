@@ -5,7 +5,7 @@ from django.db import models
 
 from django.utils import timezone
 from django.contrib.auth.models import User
-from auction.models import Auction, hobby_product
+from hobby_product.models import hobby_product
 
 class Post(models.Model):
     """

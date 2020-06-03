@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
-from auction.models import Auction, Bid
+from hobby_product.models import hobby_product
 from django.contrib.auth.decorators import login_required
 
 from django.shortcuts import render, redirect, reverse

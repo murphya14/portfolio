@@ -30,3 +30,9 @@ $(function() {
     return false;
     });
 });
+
+//Carousel from materilize
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+      
