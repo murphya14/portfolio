@@ -24,6 +24,7 @@ from accounts.views import index
 from hobby_product import urls as urls_hobby_product
 from cart import urls as urls_cart
 from posts import urls as urls_posts
+from home import urls as urls_home
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from django.views import static
@@ -32,7 +33,7 @@ from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', RedirectView.as_view(url='posts/')),
+    url(r'^$', RedirectView.as_view(url='home/')),
     url(r'^posts/', include(urls_posts)),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^$', index, name="index"),
@@ -42,4 +43,5 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
+    url(r'^home/', include(urls_home)),
 ]

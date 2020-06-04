@@ -1,26 +1,28 @@
-from django.shortcuts import render
-
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404, get_list_or_404
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib import auth
 from .models import hobby_product
 
 # Create your views here.
 def all_hobby_products(request):
-    products = hobby_product.objects.all()
+    try:
+        products = hobby_product.objects.all()
+    except:
+        messages.info(request, 'Sorry there are none in stock at this time')
+        return redirect('hobby_product')
+
+    
     return render(request, "hobby_product.html", {"products": hobby_product})
 
-def home(request):
-    """ Return home page """
 
-    return render(request, 'home.html')
-
-
-def not_found(request):
-    """ Return 404 page not found """
-
-    return render(request, '404.html')
+def details(request, hobby_product_id):
+        """ Return details page """
+        hobby_product = get_object_or_404(hobby_product, pk=hobby_product_id)
+        return render(request, 'details.html', {'hobby_prduct': hobby_product})
 
 
-def server_error(request):
-    """ Return 500 internal server error """
 
-    return render(request, '500.html')
+
+    
+    

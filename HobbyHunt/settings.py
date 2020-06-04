@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'hobby_product',
     'django_extensions',
     'search',
+    'home',
     
 ]
 
