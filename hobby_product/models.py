@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+import numpy as np
 from django.contrib.auth.models import User
 from datetime import timedelta, datetime, timezone
 from math import ceil
@@ -32,10 +32,18 @@ class hobby_product(models.Model):
     image = models.ImageField(upload_to='images')
     category = models.CharField(max_length=100, choices=CATEGORIES, blank=False)
     date_added = models.DateTimeField()
+  
  
     class Meta:
         ordering = ['-id']
         verbose_name_plural = "Hobby Products"
+
+    def average_rating(self):
+        all_ratings = map(lambda x: x.rating, self.review_set.all())
+        return np.mean(all_ratings)
+        
+    def __unicode__(self):
+        return self.name
 
     '''Create a str of the model'''
     def __str__(self):

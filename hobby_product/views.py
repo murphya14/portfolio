@@ -19,7 +19,7 @@ def all_hobby_products(request):
 def details(request, hobby_product_id):
         """ Return details page """
         hobby_product = get_object_or_404(hobby_product, pk=hobby_product_id)
-        return render(request, 'details.html', {'hobby_prduct': hobby_product})
+        return render(request, 'details.html', {'hobby_product': hobby_product})
 
 
 
