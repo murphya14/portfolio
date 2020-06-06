@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'hobby_product',
-    'posts',
     'accounts',
     'cart', 
     'checkout',

@@ -1,10 +1,8 @@
-
-from django import forms
-from .models import Post
+from .models import Review
 
 
 class PostForm(forms.ModelForm):
 
     class Meta:
-        model = Post
+        model = Review
         fields = ('content', 'image', 'published_date')

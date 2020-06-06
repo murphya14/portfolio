@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from datetime import timedelta, datetime, timezone
 from math import ceil
 
+
 class hobby_product(models.Model):
 
     ARTS_AND_CRAFT = 'Arts & Craft'
@@ -37,6 +38,29 @@ class hobby_product(models.Model):
     class Meta:
         ordering = ['-id']
         verbose_name_plural = "Hobby Products"
+    
+    class Review(models.Model):
+
+        RATING_CHOICES = (
+            (1, '1'),
+            (2, '2'),
+            (3, '3'),
+            (4, '4'),
+            (5, '5'),
+        )
+
+        hobby_product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)
+        author = models.ForeignKey(User, on_delete=models.CASCADE)
+        content = models.TextField()
+        published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
+        views = models.IntegerField(default=0)
+        image = models.ImageField(upload_to="img", blank=True, null=True)
+        rating = models.IntegerField(choices=RATING_CHOICES)
+
+
+    def __unicode__(self):
+        return self.title
+
 
     def average_rating(self):
         all_ratings = map(lambda x: x.rating, self.review_set.all())
