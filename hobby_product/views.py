@@ -10,10 +10,10 @@ def all_hobby_products(request):
         products = hobby_product.objects.all()
     except:
         messages.info(request, 'Sorry there are none in stock at this time')
-        return redirect('hobby_product')
+        return redirect('hobby_product.html')
 
     
-    return render(request, "hobby_product.html", {"products": hobby_product})
+    return render(request, "hobby_product.html", {"products": products})
 
 
 def details(request, hobby_product_id):
