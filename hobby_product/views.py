@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib import auth
 from .models import hobby_product
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 def all_hobby_products(request):
@@ -12,6 +13,17 @@ def all_hobby_products(request):
         messages.info(request, 'Sorry there are none in stock at this time')
         return redirect('hobby_product.html')
 
+    paginator = Paginator(products, 3)
+
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        # If the page is not an integer, deliver first page.
+        products = paginator.page(1)
+    except EmptyPage:
+        # If page is not an integer, deliver first page.
+        products = paginator.page(paginator.num_pages)
     
     return render(request, "hobby_product.html", {"products": products})
 
