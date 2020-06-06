@@ -24,5 +24,6 @@ def details(request, hobby_product_id):
 
 
 
-    
+
+
     
