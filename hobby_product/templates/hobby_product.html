@@ -52,10 +52,12 @@
             <!--Card content-->
             <div class="card-body">
                 <!--Title-->
+                <a href="{% url 'details' product.pk %}">
                 <h5 class="card-title">{{ product.name }}</h5>
+                
                 <!--Text-->
                 <p class="mb-0 text-muted">{{ product.price }}</p>
-                </div>
+            </div>
             <!--/.Card content-->
 
             </div>

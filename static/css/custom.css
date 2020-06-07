@@ -12,6 +12,12 @@ body { padding-top: 70px;
     body { padding-top: 100px; }
 }
 
+/*Find Hobby page */
 .image_space { margin-left: 10px;}
+
+/*Detail page */
+.quantity {
+    padding-top: 2em;
+}
 
 
