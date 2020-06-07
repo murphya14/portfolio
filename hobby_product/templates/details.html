@@ -19,57 +19,31 @@
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product_detail.image }}')"></div>
       <div class="col-lg-5 text-center text-md-left">
 
-        <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">iPad PRO</h2>
-        <span class="badge badge-danger product mb-4 ml-xl-0 ml-4">bestseller</span>
-        <span class="badge badge-success product mb-4 ml-2">SALE</span>
+        <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">{{product_detail.name}}</h2>
+
 
         <h3 class="h3-responsive text-center text-md-left mb-5 ml-xl-0 ml-4">
           <span class="red-text font-weight-bold">
             <strong>{{ product_detail.price }}</strong>
           </span>
-          <span class="grey-text">
-            <small>
-              <s>{{ product_detail.price }}</s>
-            </small>
-          </span>
         </h3>
 
         <div class="font-weight-normal">
-          
-          <p class="ml-xl-0 ml-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nesciunt atque nemo neque ut officiis nostrum incidunt maiores, magni optio et sunt suscipit iusto nisi totam quis, nobis mollitia necessitatibus.</p>
 
           <p class="ml-xl-0 ml-4">
-            <strong>Storage: </strong>64GB</p>
-          <p class="ml-xl-0 ml-4">
-            <strong>Size: </strong>9.6-inch</p>
-          <p class="ml-xl-0 ml-4">
-            <strong>Resolution: </strong>2048 x 1536</p>
-          <p class="ml-xl-0 ml-4">
-            <strong>Availability: </strong>In stock</p>
+            <strong>Category: </strong>{{ product_detail.category }}</p>
+
+          <p class="ml-xl-0 ml-4">{{ product_detail.description }}</p>
+
+        <strong>Availability: </strong>In stock</p>
           
           <div class="mt-5">
-            <p class="grey-text">Choose your color</p>
+            <p class="grey-text">Rating</p>
             <div class="row text-center text-md-left">
               <div class="col-md-4 col-12 ">
-                <div class="form-group">
-                  <input class="form-check-input" name="group100" type="radio" id="radio100" checked="checked">
-                  <label for="radio100" class="form-check-label dark-grey-text">White</label>
-                </div>
+                <!--Put in rating here-->
               </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                  <input class="form-check-input" name="group100" type="radio" id="radio101">
-                  <label for="radio101" class="form-check-label dark-grey-text">Silver</label>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                  <input class="form-check-input" name="group100" type="radio" id="radio102">
-                  <label for="radio102" class="form-check-label dark-grey-text">Gold</label>
-                </div>
-              </div>
-            </div>
-            <div class="row mt-3 mb-4">
+              
               <div class="col-md-12 text-center text-md-left text-md-right">
                <form method="post" action="{% url 'add_to_cart' product_detail.id %}">
                     {% csrf_token %}
