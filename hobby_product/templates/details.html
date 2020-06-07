@@ -13,10 +13,11 @@
 
     <div class="row">
       <div class="col-lg-6">
-
+        <img class="img-fluid product rounded" src="{{ MEDIA_URL }}{{ product_detail.image }}">
         </div>
         <!--/.Image-->
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product_detail.image }}')"></div>
+        
+      
       <div class="col-lg-5 text-center text-md-left">
 
         <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">{{product_detail.name}}</h2>
@@ -35,7 +36,7 @@
 
           <p class="ml-xl-0 ml-4">{{ product_detail.description }}</p>
 
-        <strong>Availability: </strong>In stock</p>
+            <p><strong>Availability: </strong>In stock</p>
           
           <div class="mt-5">
             <p class="grey-text">Rating</p>
