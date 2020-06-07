@@ -5,6 +5,7 @@ import numpy as np
 from django.contrib.auth.models import User
 from datetime import timedelta, datetime, timezone
 from math import ceil
+from django.utils import timezone
 
 
 class hobby_product(models.Model):
@@ -39,7 +40,7 @@ class hobby_product(models.Model):
         ordering = ['-id']
         verbose_name_plural = "Hobby Products"
     
-    class Review(models.Model):
+class Review(models.Model):
 
         RATING_CHOICES = (
             (1, '1'),
@@ -49,7 +50,7 @@ class hobby_product(models.Model):
             (5, '5'),
         )
 
-        hobby_product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)
+        '''hobby_product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)'''
         author = models.ForeignKey(User, on_delete=models.CASCADE)
         content = models.TextField()
         published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
@@ -58,17 +59,17 @@ class hobby_product(models.Model):
         rating = models.IntegerField(choices=RATING_CHOICES)
 
 
-    def __unicode__(self):
+def __unicode__(self):
         return self.title
 
 
-    def average_rating(self):
+def average_rating(self):
         all_ratings = map(lambda x: x.rating, self.review_set.all())
         return np.mean(all_ratings)
         
-    def __unicode__(self):
+def __unicode__(self):
         return self.name
 
-    '''Create a str of the model'''
-    def __str__(self):
+'''Create a str of the model'''
+def __str__(self):
             return "Product " + str(self.pk) + " " + self.name

@@ -6,6 +6,7 @@ from .models import hobby_product, Review
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils import timezone
 from .forms import PostForm
+from django import forms
 
 
 def all_hobby_products(request):
@@ -32,9 +33,9 @@ def all_hobby_products(request):
 
 def details(request, hobby_product_id):
         """ Return details page """
-        hobby_product = get_object_or_404(hobby_product, pk=hobby_product_id)
+        product = get_object_or_404(hobby_product, pk=hobby_product_id)
         form = form
-        return render(request, 'details.html', {'hobby_product': hobby_product, 'form': form})
+        return render(request, 'details.html', {'product': product, 'form': form})
 
 
 def get_reviews(request):
