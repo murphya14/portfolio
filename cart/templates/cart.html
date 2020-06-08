@@ -20,7 +20,7 @@
             <p>{{ item.price }}</p>
             <p>
                 
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' auction.id %}">
+                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
