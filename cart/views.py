@@ -25,18 +25,13 @@ def add_to_cart(request, id):
     return redirect(reverse('home'))
 
 
-def adjust_cart(request, id):
-    """
-    Adjust the quantity of the specified product to the specified
-    amount
-    """
-    quantity = int(request.POST.get('quantity'))
+def remove_cart_item(request, product_id):
+    """ Remove single product item """
     cart = request.session.get('cart', {})
 
-    if quantity > 0:
-        cart[id] = quantity
-    else:
-        cart.pop(id)
-    
+    if product_id in cart:
+        cart.pop(product_id)
+        messages.success(request, 'Successfully removed item')
+
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
