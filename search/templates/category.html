@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div id="page-heading">
+        <h1>{{ category.title }}</h1>
+    </div>
+
+
+    <div class="row justify-content-center">
+      {% for product in products %}
+      <div class="event-summary mx-3">
+          {% if product.category == 'Arts & Craft' %}
+            <div class="online-lots-mil">Arts & Craft</div>
+            {% elif product.category == 'music' %}
+              <div class="online-lots-rle">Music</div>
+            {% elif product.category == 'games' %}
+              <div class="online-lots-wea">Games</div>
+            {% elif product.category == 'collectors' %}
+              <div class="online-lots-cul">Collectors</div>
+            {% elif product.category == 'academic' %}
+              <div class="online-lots-cul">Academic</div>
+            {% elif product.category == 'sport and outdoors' %}
+              <div class="online-lots-cul">Sport & Outdoors</div>
+            {% elif product.category == 'other' %}
+              <div class="online-lots-cul">Other</div>
+          {% endif %}
+          <div class="event-summary-body d-md-flex">
+            <a href="{% url 'details' product.pk %}">
+              <div class="image">
+                <img class="small-img med-img" src='{{ MEDIA_URL }}{{ product.image }}' alt="image">
+              </div>
+              <div class="data-container-lots">
+                <span class="number">
+                  <span class='lot-number'>Product No. {{ product.pk }}</span>
+                </span>
+                <div class="name color-blue pl-3 pt-3">{{ product.name }}</div>
+              </a>
+              <div class="pl-3 pt-1">{{ product.description|truncatewords:25 }}</div>
+
+                                                  
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  
+
+{% endblock %}
