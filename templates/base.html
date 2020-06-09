@@ -52,6 +52,25 @@
         <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'all_hobby_products' %}">Find a Hobby</a></li>
+                
+                
+                
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Categories
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'category' category='Arts & Craft' %}">Arts & Craft</a>
+                            <a class="dropdown-item" href="{% url 'category' category='music' %}">Music</a>
+                            <a class="dropdown-item" href="{% url 'category' category='games' %}">Games</a>
+                            <a class="dropdown-item" href="{% url 'category' category='collectors' %}">Collectors</a>
+                            <a class="dropdown-item" href="{% url 'category' category='academic' %}">Academic</a>
+                            <a class="dropdown-item" href="{% url 'category' category='sport and outdoors' %}">Sports & Outdoors</a>
+                            <a class="dropdown-item" href="{% url 'category' category='other' %}">other</a>
+                        </div>
+                    </li>
+                  
+                  
                   {% if user.is_authenticated %}
                   <li class="nav-item"><a class="nav-link" href="{% url 'new_review' %}">Leave a Review</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"> My Profile</a></li>
