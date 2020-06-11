@@ -20,6 +20,7 @@ class hobby_product(models.Model):
     OTHER = 'other'
     CATEGORIES = (
         (NONE, 'Select a category'),
+        (ARTS_AND_CRAFT, 'Arts & Craft'),
         (MUSIC, 'Music'),
         (GAMES, 'Games'),
         (COLLECTORS, 'Collectors'),

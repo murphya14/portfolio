@@ -46,4 +46,4 @@ def category(request, category):
         return redirect('hobby_products')
 
 
-    return render(request, 'category.html', {'products': hobby_product, 'category': category})
+    return render(request, 'category.html', {'products': product_objects, 'category': category})
