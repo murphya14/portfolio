@@ -9,8 +9,6 @@ from django.contrib import messages
 # Create your views here.
 def do_search(request):
     '''Use keyword to get products'''
-    products = hobby_product.objects.filter(name__icontains=request.GET['q'])
-    
     if request.method == 'GET':
         keyword = request.GET.get('q')
 
@@ -18,17 +16,15 @@ def do_search(request):
 
         if keyword is None or keyword == "":
             messages.error(request, 'Please enter in a keyword to search')
-            return redirect('all_lot_items')
+            return redirect('all_hobby_products')
 
         elif keyword:
             keyword_lookup = hobby_product.objects.filter(Q(name__icontains=keyword) | \
                 Q(description__icontains=keyword))
             for item in keyword_lookup:
                 keyword_obj.append(item)
-            
 
-
-            return render(request, 'hobby_product.html', {"products": hobby_product})
+            return render(request, 'hobby_product.html', {'products': hobby_product})
     else:
         return redirect('all_hobby_products')
 
