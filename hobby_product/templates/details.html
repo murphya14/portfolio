@@ -66,10 +66,12 @@
                                 <div class="col-xs-9">
                                     <p>{{ post.content|truncatewords:30 }}</p>
                             <p>{{ product.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
-                        <a href="{% url 'reviews:product_review' product_detail.id %}"  class="btn btn-default">Read more</a>
-                             </p>
-                        </div>
-
+               <div class="col-xs-9">
+                                 <p>
+                        <a href="{% url 'reviews:add_review' product_detail.id %}"> Read more...</a>
+                    </p>
+                </div>
+       
                         <hr>
                     </div>
 
@@ -79,7 +81,9 @@
                         <small class="text-muted">No Reviews at this time</small>
                     {% endif %}
                <div class="col-xs-9">
-                            <a href="{% url 'reviews:add_review' product_detail.id %}"  class="btn btn-default">Leave a Review</a>
+               <p>
+                        <a href="{% url 'reviews:add_review' product_detail.id %}"> Leave a Review</a>
+                    </p>
                           
 </div>
                 

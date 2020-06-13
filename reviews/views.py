@@ -27,7 +27,7 @@ def add_review(request, id):
             review.user_name = request.user
             form.save()
             products = hobby_product.objects.all()
-        return redirect('products')
+        return redirect('all_hobby_products')
     else:
         form=ReviewForm()
         return render(request, "create_review.html", {'product': product, 'form': form}) 
