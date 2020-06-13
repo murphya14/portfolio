@@ -35,7 +35,9 @@ class hobby_product(models.Model):
     image = models.ImageField(upload_to='images')
     category = models.CharField(max_length=100, choices=CATEGORIES, blank=False)
     date_added = models.DateTimeField()
-  
+    
+    def __str__(self):
+        return self.name
  
     class Meta:
         ordering = ['-id']
