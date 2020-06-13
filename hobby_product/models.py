@@ -57,7 +57,6 @@ class Review(models.Model):
         author = models.ForeignKey(User, on_delete=models.CASCADE)
         content = models.TextField()
         published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
-        views = models.IntegerField(default=0)
         image = models.ImageField(upload_to="img", blank=True, null=True)
         rating = models.IntegerField(choices=RATING_CHOICES, default=5)
 
