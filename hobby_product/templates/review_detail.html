@@ -16,9 +16,19 @@
             <div class="row">
                 <div class="col-xs-9">
                     <p>{{ review.content }}</p>
-                    <p><span class="boldtext">Published on:</span> {{ review.published_date }} </p>
-                    <p><span class="boldtext">Views:</span> {{review.views}}</p>
-                    <p><span class="boldtext">Tag:</span> {{ review.tag }}</p>
+                    <p><span class="boldtext">Product:</span> {{ review.product }} </p>
+                    <p><span class="boldtext">Rating:</span> {{review.Rating}}</p>
+                    <link href="css/star-rating.css" rel="stylesheet">
+                    <select class="star-rating">
+    <option value="">Select a rating</option>
+    <option value="5">Excellent</option>
+    <option value="4">Very Good</option>
+    <option value="3">Average</option>
+    <option value="2">Poor</option>
+    <option value="1">Terrible</option>
+</select>
+                    <p><span class="boldtext">Content:</span> {{ review.content }}</p>
+                    <p><span class="published_date">Content:</span> {{ review.published_date }}</p>
                     <a href="{% url 'get_reviews' %}" class="btn btn-default">Back to Blog</a>
                     <a href="{% url 'edit_review' review.id %}" class="btn btn-default">Edit Review</a>
                     <hr>
@@ -26,4 +36,8 @@
             </div>
         </div>
     </div>
+    <script src="js/star-rating.min.js"></script>
+<script>
+    var starRatingControls = new StarRating( '.star-rating' );
+</script>
 {% endblock %}

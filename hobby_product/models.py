@@ -51,13 +51,13 @@ class Review(models.Model):
             (5, '5'),
         )
 
-        '''hobby_product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)'''
+        product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)
         author = models.ForeignKey(User, on_delete=models.CASCADE)
         content = models.TextField()
         published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
         views = models.IntegerField(default=0)
         image = models.ImageField(upload_to="img", blank=True, null=True)
-        rating = models.IntegerField(choices=RATING_CHOICES)
+        rating = models.IntegerField(choices=RATING_CHOICES, default=5)
 
 
 def __unicode__(self):
