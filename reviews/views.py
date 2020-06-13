@@ -24,7 +24,7 @@ def add_review(request, id):
         if form.is_valid():
             review = form.save(commit=False)
             review.product = product
-            review.user_name = request.user
+            review.author = request.user
             form.save()
             products = hobby_product.objects.all()
         return redirect('all_hobby_products')
