@@ -36,6 +36,4 @@ def details(request, hobby_product_id):
         """ Return details page """
         product_detail = get_object_or_404(hobby_product, pk=hobby_product_id)
         
-        reviews = Review.objects.filter(published_date__lte=timezone.now()
-        ).order_by('-published_date')
-        return render(request, 'details.html', {'product_detail': product_detail, 'reviews': reviews})
+        return render(request, 'details.html', {'product_detail': product_detail})
