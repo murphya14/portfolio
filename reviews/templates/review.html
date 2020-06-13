@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+<div class="container">
+    <div class="row">
+
+        <!-- Header section -->
+        <!-- Displays course name with background of course image on small screens and up -->
+        <div class="header review-header hidden-xs" style="background-image: url('{{ MEDIA_URL }}{{ course.image }}')">
+            <p class="review-name">{{ product.name }}</p>
+        </div>
+
+        <!-- Displays course name on extra small screen, -->
+        <div class="header review-header-sm visible-xs">
+            {{ product.name }}
+        </div>
+        <div class="header review-header-sm review-sm-img visible-xs" style="background-image: url('{{ MEDIA_URL }}{{ course.image }}')"></div>
+
+        <!-- Review area, with course details, add to cart option, reviews and leave a review option -->
+        <div class="row review-info-area light-text">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <span class="sort-inline review-inner-header">Description</span>
+                <hr class="hr-dark-grey" />
+                <p class="course-description">{{ product.description }}</p>
+
+                {% if user.is_authenticated %}
+                <!-- Add to cart -->
+                <form method="post" action="{% url 'add_to_cart' course.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control qty-height" placeholder="Quantity" required>
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
+                    </div>
+                </form>
+
+                <!-- If user is logged in they can leave a review -->
+                <a href="{% url 'add_review' course.id %}" class="btn btn-success review-btn"> Leave a review </a>
+                <hr class="hr-dark-grey" /> 
+                {% endif %}
+            </div>
+
+            <!-- Displays the most recent 10 reviews -->
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <span class="sort-inline review-inner-header">Reviews (Most recent 5)</span>
+                <hr class="hr-dark-grey" />
+
+                <!-- Loops through each review in reviews -->
+                {% for review in reviews %}
+                <div>
+                    <p>{{ review.rating }} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ review.user_name | upper }}</p>
+                    <p>{{ review.comment }} </p>
+                    <hr/>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

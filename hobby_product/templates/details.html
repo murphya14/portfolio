@@ -58,32 +58,30 @@
                  </div>
             </form>
         
-        {% if reviews %}
+        {% if review.Rating %}
             {% for post in reviews %}
-                    <div class="row">
-                        <div class="col-md-2 col-sm-3 text-center">
-                            <a class="story-img" href="#">
-                                <img src="/media/img/profile.jpg" class="img-circle">
-                            </a>
-                            <p><span class="boldtext">Author:</span> Niel</p>
-                        </div>
-                        <div class="col-md-10 col-sm-9">
+                              <div class="col-md-10 col-sm-9">
                             <h3>{{ post.product }}</h3>
                             <div class="row">
                                 <div class="col-xs-9">
                                     <p>{{ post.content|truncatewords:30 }}</p>
-                                    <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-default">Read more</a></p>
-                                    <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                                    <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                                    <p><span class="boldtext">Tag:</span> {{ post.image }}</p>
-                                </div>
-                            </div>
+                            <p>{{ product.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
+                        <a href="{% url 'product_review' product.id %}"  class="btn btn-default">Read more</a>
+                             </p>
                         </div>
+<div class="col-xs-9">
+                            <a href="{% url 'product_review' product.id %}"  class="btn btn-default">Leave a Review</a>
+                          
+</div>
                         <hr>
                     </div>
+
                 {% endfor %}
-                                    
-            {% endif %}           
+            
+                    {% else %}
+                        <small class="text-muted">No Reviews at this time</small>
+                    {% endif %}
+               
                 
                  
               </div>
@@ -97,11 +95,7 @@
       </div>
     </div>
 
-            {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
+
   </section>
   <!--Section: Content-->
 

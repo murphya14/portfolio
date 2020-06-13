@@ -1,11 +1,11 @@
 from __future__ import unicode_literals
-
 from django.db import models
 import numpy as np
 from django.contrib.auth.models import User
 from datetime import timedelta, datetime, timezone
 from math import ceil
 from django.utils import timezone
+from django.db.models import Avg
 
 
 class hobby_product(models.Model):
@@ -38,40 +38,13 @@ class hobby_product(models.Model):
     
     def __str__(self):
         return self.name
+    
+    def average_rating(self):
+        return self.review_set.aggregate(Avg('rating'))['rating__avg']
+
  
     class Meta:
         ordering = ['-id']
         verbose_name_plural = "Hobby Products"
     
-class Review(models.Model):
 
-        RATING_CHOICES = (
-            (1, '1'),
-            (2, '2'),
-            (3, '3'),
-            (4, '4'),
-            (5, '5'),
-        )
-
-        product = models.OneToOneField(hobby_product, on_delete=models.CASCADE)
-        author = models.ForeignKey(User, on_delete=models.CASCADE)
-        content = models.TextField()
-        published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
-        image = models.ImageField(upload_to="img", blank=True, null=True)
-        rating = models.IntegerField(choices=RATING_CHOICES, default=5)
-
-
-def __unicode__(self):
-        return self.title
-
-
-def average_rating(self):
-        all_ratings = map(lambda x: x.rating, self.review_set.all())
-        return np.mean(all_ratings)
-        
-def __unicode__(self):
-        return self.name
-
-'''Create a str of the model'''
-def __str__(self):
-            return "Product " + str(self.pk) + " " + self.name
