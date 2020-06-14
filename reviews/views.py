@@ -13,7 +13,7 @@ from django.contrib.auth.models import User
 def product_review(request, id):
 
     product = get_object_or_404(hobby_product, pk=id)
-    reviews = Review.objects.filter(product = id).order_by('-pub_date')[:5]
+    reviews = Review.objects.filter(product = id).order_by('-published_date')[:5]
     return render(request, "review.html", {"reviews":reviews, "product":product})
 
 

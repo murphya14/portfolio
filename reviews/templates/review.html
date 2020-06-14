@@ -26,7 +26,7 @@
 
                 {% if user.is_authenticated %}
                 <!-- Add to cart -->
-                <form method="post" action="{% url 'add_to_cart' course.id %}">
+                <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
                         <input name="quantity" type="number" min="1" max="999" class="form-control qty-height" placeholder="Quantity" required>
@@ -37,7 +37,7 @@
                 </form>
 
                 <!-- If user is logged in they can leave a review -->
-                <a href="{% url 'add_review' course.id %}" class="btn btn-success review-btn"> Leave a review </a>
+                <a href="{% url 'reviews:add_review' product.id %}" class="btn btn-success review-btn"> Leave a review </a>
                 <hr class="hr-dark-grey" /> 
                 {% endif %}
             </div>
