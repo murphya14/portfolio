@@ -1,5 +1,5 @@
 from django.db import models
-from hobby_product.models import hobby_product
+#from hobby_product.models import hobby_product
 from django.utils import timezone
 import datetime
 from django.contrib.auth.models import User
