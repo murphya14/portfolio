@@ -39,8 +39,10 @@ class hobby_product(models.Model):
     def __str__(self):
         return self.name
     
+
     def average_rating(self):
-        return self.review_set.aggregate(Avg('rating'))['rating__avg']
+        all_ratings = map(lambda x: x.rating, self.reviews.all())
+        return np.mean(all_ratings)
 
  
     class Meta:

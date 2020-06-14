@@ -3,6 +3,9 @@ from hobby_product.models import hobby_product
 from django.utils import timezone
 import datetime
 from django.contrib.auth.models import User
+import numpy as np
+from django.contrib.auth.models import User
+from math import ceil
 
 class Review(models.Model):
 
@@ -19,6 +22,9 @@ class Review(models.Model):
         published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
         image = models.ImageField(upload_to="img", blank=True, null=True)
         rating = models.IntegerField(choices=RATING_CHOICES, default=5, blank=False)
+
+
+
 
 
 def __unicode__(self):
