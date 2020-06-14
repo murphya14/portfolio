@@ -84,19 +84,28 @@
       </div>
     </div>
 
+<!--Loops through reviews-->
 <div class="col-md-10 col-sm-9">
       <h3>Reviews</h3>
            <div class="row">
                <div class="col-xs-9">
-                   <p>{{ product_detail.content|truncatewords:30 }}</p>
-                    <p>{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
-                <p>{{ product_detail.rating }} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ product_detail.author | upper }}</p>
-               <div class="col-xs-9">
+
+
+<p>{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
+    <p>{{ review.content|truncatewords:30 }} </p>
+  {% for review in reviews %}
+                <div>
+                   
+                    <p>{{ review.rating}} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ review.content }}</p>
+                  
+                    <hr/>
+                </div>
+                {% endfor %}
+                <div class="col-xs-9">
                     <p>
             <a href="{% url 'reviews:product_review' product_detail.id %}"> Read more...</a>
                     </p>
                 </div>
-       
                         <hr>
                     </div>
 

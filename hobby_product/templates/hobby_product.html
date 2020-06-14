@@ -14,23 +14,6 @@
 {% if products %}
         
     {% for product in products %}
-       <!--Categories-->
-            <div class="event-summary mx-3">
-            {% if product.category == 'Arts & Craft' %}
-              <div class="">Arts & Craft</div>
-              {% elif product.category == 'music' %}
-                <div class="">Music</div>
-              {% elif product.category == 'games' %}
-                <div class="">Games</div>
-              {% elif product.category == 'collectors' %}
-                <div class="">Collectors Items</div>
-              {% elif product.category == 'Sport & outdoors' %}
-                <div class="">Sport & Outdoors</div>
-              {% elif product.category == 'Academic & Educational' %}
-                <div class="">Academic & Educational</div>
-            {% else %}
-              <div class="">Other</div>
-            {% endif %}
 
 
         <!--Grid column-->
@@ -57,6 +40,11 @@
                 
                 <!--Text-->
                 <p class="mb-0 text-muted">{{ product.price }}</p>
+
+                <p>{{ product.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
+  
+                </p>
+
             </div>
             <!--/.Card content-->
 
