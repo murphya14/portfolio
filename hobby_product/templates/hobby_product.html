@@ -36,12 +36,12 @@
             <div class="card-body">
                 <!--Title-->
                 <a href="{% url 'details' product.pk %}">
-                <h5 class="card-title">{{ product.name }}</h5>
+                <h5 class="card-title text-center">{{ product.name }}</h5>
                 
                 <!--Text-->
-                <p class="mb-0 text-muted">{{ product.price }}</p>
+                <p class="mb-0 text-muted text-center">{{ product.price }}</p>
 
-                <p>{{ product.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
+                <p class="text-center">{{ product.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
   
                 </p>
 
