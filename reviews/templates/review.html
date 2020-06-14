@@ -6,18 +6,21 @@
     <div class="row">
 
         <!-- Header section -->
-        <!-- Displays course name with background of course image on small screens and up -->
-        <div class="header review-header hidden-xs" style="background-image: url('{{ MEDIA_URL }}{{ course.image }}')">
-            <p class="review-name">{{ product.name }}</p>
+        <!-- Displays image on small screens and up -->
+        <div class="header review-header hidden-xs">
+        <img class="img-fluid product rounded" src="{{ MEDIA_URL }}{{ product.image }}">
+        </div>
+           
+            <p class="review-name">{{ product.product }}</p>
         </div>
 
-        <!-- Displays course name on extra small screen, -->
+        <!-- Displays product on extra small screen, -->
         <div class="header review-header-sm visible-xs">
-            {{ product.name }}
+            {{ product.product }}
         </div>
-        <div class="header review-header-sm review-sm-img visible-xs" style="background-image: url('{{ MEDIA_URL }}{{ course.image }}')"></div>
+        <div class="header review-header-sm review-sm-img visible-xs"></div>
 
-        <!-- Review area, with course details, add to cart option, reviews and leave a review option -->
+        <!-- Review area, with product details, add to cart option, reviews and leave a review option -->
         <div class="row review-info-area light-text">
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <span class="sort-inline review-inner-header">Description</span>
@@ -51,7 +54,7 @@
                 {% for review in reviews %}
                 <div>
                     <p>{{ review.rating }} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ review.user_name | upper }}</p>
-                    <p>{{ review.comment }} </p>
+                    <p>{{ review.content }} </p>
                     <hr/>
                 </div>
                 {% endfor %}

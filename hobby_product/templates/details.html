@@ -8,8 +8,7 @@
   <section class="text-center">
 
     <!-- Section heading -->
-    <h3 class="font-weight-bold mb-5">Product Details</h3>
-    <p class="product-description">{{ product_detail.description }}</p>
+    <h3 class="font-weight-bold mb-5">Find out More</h3>
 
     <div class="row">
       <div class="col-lg-6">
@@ -37,15 +36,8 @@
           <p class="ml-xl-0 ml-4">{{ product_detail.description }}</p>
 
             <p class="ml-xl-0 ml-4"><strong>Availability: </strong>In stock</p>
-          
-          <div class="mt-5">
-            <p class="grey-text">Rating</p>
-            <div class="row text-center text-md-left">
-              <div class="col-md-4 col-12 ">
-                <!--Put in rating here-->
-              </div>
-              
-              <div class="col-md-8 mb-4">
+<!--Add to cart-->
+             <div class="col-md-8 mb-4">
 
             <form method="post" action="{% url 'add_to_cart' product_detail.id%}">
                 {% csrf_token %}
@@ -58,8 +50,21 @@
                  </div>
             </form>
         
-        
-
+         <!--Review--> 
+          <div class="mt-6">
+            <p class="grey-text">Rating</p>
+            <div class="row text-center text-md-left">
+              <div class="col-md-4 col-12 ">
+                <!--Put in rating here-->
+                <!--Loops through reviews-->
+<p>{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
+            
+                    <p>
+            <a href="{% url 'reviews:product_review' product_detail.id %}"> Read Reviews </a>
+                    </p>
+    
+              </div>
+              
             
                 <!--  <small class="text-muted">No Reviews at this time</small> -->
 
@@ -83,31 +88,6 @@
 
       </div>
     </div>
-
-<!--Loops through reviews-->
-<div class="col-md-10 col-sm-9">
-      <h3>Reviews</h3>
-           <div class="row">
-               <div class="col-xs-9">
-
-
-<p>{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
-    <p>{{ review.content|truncatewords:30 }} </p>
-  {% for review in reviews %}
-                <div>
-                   
-                    <p>{{ review.rating}} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ review.content }}</p>
-                  
-                    <hr/>
-                </div>
-                {% endfor %}
-                <div class="col-xs-9">
-                    <p>
-            <a href="{% url 'reviews:product_review' product_detail.id %}"> Read more...</a>
-                    </p>
-                </div>
-                        <hr>
-                    </div>
 
 
 
