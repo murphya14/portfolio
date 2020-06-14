@@ -4,6 +4,7 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here.
@@ -40,6 +41,18 @@ def category(request, category):
     except:
         messages.info(request, 'Sorry there are no products in this category at this time')
         return redirect('hobby_products')
+
+    paginator = Paginator(product_objects, 6)
+
+    page = request.GET.get('page')
+    try:
+        product_objects = paginator.page(page)
+    except PageNotAnInteger:
+        # If the page is not an integer, deliver first page.
+        product_objects = paginator.page(1)
+    except EmptyPage:
+        # If page is not an integer, deliver first page.
+        product_objects = paginator.page(paginator.num_pages)
 
 
     return render(request, 'category.html', {'products': product_objects, 'category': category})
