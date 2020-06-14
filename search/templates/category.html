@@ -14,11 +14,7 @@
     <h3 class="font-weight-bold mb-5"> {{ category.title }} </h3>
     {% if products %}
 
-    <div class="row justify-content-center">
       {% for product in products %}
-      <div class="event-summary mx-3">
-          
-
 
                 <!--Grid column-->
         <div class="col-md-4 mb-4">
@@ -46,13 +42,12 @@
                 <p class="mb-0 text-muted text-center">{{ product.price }}</p>
 
                 <p class="text-center">{{ product.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
-  
-                </p>
-
-            </div>
+                </p>    
+            
+</div>
             <!--/.Card content-->
 
-            </div>
+
             <!--/.Card-->
 
         </div>
@@ -75,6 +70,9 @@
     </div>
     
   {% endif %}
+  </div>
+
+  
 <!-- Pagination -->
 <div class="row d-flex justify-content-center mt-3" aria-label="Page navigation example">
   <div class="pagination">
@@ -94,8 +92,6 @@
           {% endif %}
       </span>
     
- 
-  </div>
 
 <!-- End Pagination -->
 <!-- ./container -->
