@@ -2,8 +2,62 @@
 
 {% extends "base.html" %}
 {% block content %}
-{{ user }}'s Profile
 
-<p>{{ profile.email }}</p>
+
+<div class="container my-5 px-0 z-depth-1">
+
+  <!--Section: Content-->
+  <section class="p-5 my-md-5 text-center" 
+    style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-size: cover; background-position: center center;">
+
+    <div class="my-5 mx-md-5">
+
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <!-- Material form login -->
+          <div class="card">
+
+            <!--Card content-->
+            <div class="card-body">
+
+           
+              <div class="text-center" style="color: #757575;">
+
+                <h3 class="font-weight-bold my-4 pb-2 text-center dark-grey-text">{{ profile.username  }}'s Profile</h3>
+
+                 <h5 class="font-weight-bold my-4 pb-2 text-center dark-grey-text">{{ user }}</h5>
+             
+                <h6 class="light-grey"> There are {{ product_count }} item(s) in your cart</h6>
+
+                 <p><a class="btn btn-success" href="{% url 'view_cart' %}">View My Cart</a></p>
+
+                <div class="text-center">
+                  <button type="button" href="{% url 'password_reset' %}" class="btn btn-outline-orange btn-rounded my-4 waves-effect">Reset your password</button>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+          <!-- Material form login -->
+        </div>
+      </div>
+
+
+  </section>
+  <!--Section: Content-->
+
+
+</div>
+
+
+
+
+
+
+
+
 
 {% endblock %}
