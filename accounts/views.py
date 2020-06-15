@@ -54,7 +54,7 @@ def registration(request):
                                      password=request.POST['password1'])
             if user:
                 auth.login(user=user, request=request)
-                messages.success(request, "You have successfully registered")
+                messages.success(request, "You have successfully registered and are logged in")
             else:
                 messages.error(request, "Unable to register your account at this time")
     else:
