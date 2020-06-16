@@ -7,32 +7,81 @@
 
 
 {% block content %}
-<div class="row row-flex">
 
-    {% for item in cart_items %}
-    
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
-        
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.image }}')"></div>
-        
-        <div class="caption">
-            <h3>{{ item.name }}</h3>
-            <p class="product-description">{{ item.description }}</p>
-            <p>{{ item.price }}</p>
-                            <a href="{% url 'remove_cart_item' item.id %}" class="btn btn-danger">Remove Item</a>
+<section>
+      <!--Grid column-->
+              <div class="card-body">
+                <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Summary</h4>
+                <hr>
+      {% for item in cart_items %}
+            <!--Card-->
+          
 
-        </div>
-    </div>
-    {% endfor %}
-</div>
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+              <!--Card content-->
+      
+                <dl class="row">
+                  <dd class="col-sm-8">
+                    {{item.product.name}} 
+                  </dd>
+                  <dd class="col-sm-4">
+                    {{ item.product.description }}
+                  </dd>
+                </dl>
+             
+
+                <hr>
+
+                <dl class="row">
+                  <dd class="col-sm-8">
+                    {{ item.product.price }}
+
+                               <a href="{% url 'remove_cart_item' item.id %}" class="btn btn-danger">Remove Item</a>
+                  </dd>
+                </dl>
+
+                <hr>
+     
+   {% endfor %}
+                
+
+                <dl class="row">
+                  <dt class="col-sm-8">
+                    Total
+                  </dt>
+                  <dt class="col-sm-4">
+                     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
      {% if product_count != 0 %}
     <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 {% else %}
   <a href="{% url 'checkout' %}" class="btn btn-success disabled" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
      {% endif %}
 </div>
+                  </dt>
+                </dl>
+              </div>
+
+
 
 {% endblock %}
+
+
+
+            </div>
+            <!--/.Card-->
+
+
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+    </div>
+
+          <div class="col-lg-4 mb-4">
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Place order</button>
+  </section>
+  <!--Section: Content-->
