@@ -52,55 +52,58 @@ For the color palate I used this
 ### Existing Features
 
 #### Admin
-- With the admin feature, the admin can log in and add/remove courses from the database. 
-- They can also remove reviews.
-- They can check any orders that have been made. Within the order they can see the address of the customer, when they ordered and what they ordered. If necessary, they can add or remove items from the order 
+- With the admin feature, the superuser can control the products displayed with all the information. 
+- The super user can remove reviews which allows for filtering of appropriate reviews.
+- The super user has the ability to remove users if required.
+- The super user has the ability to see orders which includes all the postal information. If required, the superuser can delete the order.
 
-#### Course Display
-- Customers can browse training courses.
+#### Product Display
+- Customers can browse the products. 
+- As often customers will have a specific hobby in mind, the customer has the option to search by category. 
+- The customer can gather more information regarding the product by selecting it and rendering the details page. 
+This contains a link to the reviews, displays the average review rating and expands on information regarding the specific product.
 
 #### Login/Register
-- Cusotmers need to log in before purchasing services or leaving reviews.
+- Customers need to register and log in before they have the ability to leave a review or purchase an item.
+- Customers who need to reset their password, can do so on the login page or if they wish to changed it while they are logged in, can do so on their profile page.
 
 #### Pagination
-- Customers when browsing will be displayed 6 services max at a time.
+- Customers when browsing will be displayed 6 products max at a time.
 
 #### Search
-- Customers can search the database for courses.
-
-#### Sort
-- Customers can sort the courses by name or cost, by ascending or descending.
+- Customers can search the database for products.
 
 #### Leave Review
-- Customers can leave reviews for services. They can be rated out of 5. The results of all the reviews are used to show the average. This can be useful for customers when picking a service.
+- Customers can leave reviews for products by rating them out of 5. 
+The average is calculated from all of the reviews and the result is displayed on the browse card so customers can become easily informed. 
+
+#### Cart
+- As Customers add to the cart, their Total is calculated and displayed in the cart.
+- There is a summary of all the items shown in the cart.
+- The customer can remove items from the cart if required. 
 
 #### Payments
-- Customers can pay for orders using and API called Stripe (However at the moment it is in testing mode)
-- To "pay" use 4242 4242 4242 4242 as the card number.
-
-#### Account Reset
-- If users would like to reset their password they can go to their profile and select the option to do so. They will then recieve a link to change their password by email.
+- Customers can pay for orders using and API called Stripe
 
 ### Future Features
 
 #### Sort by review
-- In future customers will have the option to sort services by review, either in ascendeing or descending order.
+- Allow customers the option of sorting by review, either in ascendeing or descending order.
 
-#### Upload profile image
+#### Customize profile 
 - An option to upload a profile picture to users accounts.
+- Be part of a group based on the hobby e.g list the hobbies you are interested in and this then filters the preference specified. 
 
 #### Payment information
-- The ability to retain card information for future payments.
+- The ability to retain card information for future payments and implement stronger security measures e.g. send a code through text to verify payment. 
 
 #### Confirmation emails
-- Once a user places an order they will recieve a confirmation email with their order summary.
+- After the payment has been made, the customer receives a confirmation email which contains the cart summary.
 
 #### Deactivate account
 - Ability for users to deactivate account.
 
-#### Expanded website
-- An expanded website to include utensils that would be needed for a pizza shop.
-- An area of the website to place an order of ingredients.
+
 
 ## Technologies Used
 The project makes use of:
@@ -112,17 +115,15 @@ The project makes use of:
  -- The framework used to put this project together.
  - [Chrome](https://www.google.co.uk/chrome/?brand=CHBD&gclid=CjwKCAjwg-DpBRBbEiwAEV1_-HRKc5kuXoGrUIbi1QWzng3ZEvw3Obv1qmhUoXJa2iqrfZ4IxfgntRoC_hYQAvD_BwE&gclsrc=aw.ds)
  -- A cross-platform web browser developed by Google. Used as the main browser for dev tools, and to test responsiveness.
- - [AWS cloud9](https://aws.amazon.com/cloud9/)
+ - [Gitpod](https://gitpod.io/workspaces/)
  -- An online IDE.
  - [GitHub](https://github.com/)
  -- Provides hosting for software development version control using Git.
- - [Responsive Design](http://ami.responsivedesign.is/)
- -- Used to screenshot web application on different devices.
- - [Google Fonts](https://fonts.google.com/)
- -- Used for 'Nunito' font.
  - [Heroku](https://www.heroku.com)
  -- Used to deploy, and host app.
  - [Bootstrap](https://getbootstrap.com/)
+ -- Used for premade CSS styling
+ - [MDBootstrap](https://mdbootstrap.com/snippets/)
  -- Used for premade CSS styling
  - [Font Awesome](https://fontawesome.com/)
  -- Used for premade icons.
@@ -130,27 +131,13 @@ The project makes use of:
  -- A hosted continuous integration service used to build and test software projects hosted at GitHub
  - [Stripe](https://stripe.com)
  -- An API that allows individuals and businesses to make and receive payments over the Internet.
- - [AWS](https://aws.amazon.com)
- -- Used for hosting images and static data. 
  - [Postgres](https://www.postgresql.org/)
  -- A free and open-source relational database management system emphasizing extensibility and technical standards compliance.
 
 ## Testing
 
 ### Responsiveness
-[Chrome](https://www.google.co.uk/chrome/?brand=CHBD&gclid=CjwKCAjwg-DpBRBbEiwAEV1_-HRKc5kuXoGrUIbi1QWzng3ZEvw3Obv1qmhUoXJa2iqrfZ4IxfgntRoC_hYQAvD_BwE&gclsrc=aw.ds)
-Was used to test:
-- Galaxy S5
-- Pixel 2
-- Pixel 2XL
-- iPhone 5/SE
-- iPhone 6/7/8
-- iPhone 6/7/8 Plus
-- iPhone X
-- iPad
-- iPad Pro
-- Desktop
-Page is fully responsive.
+Used developer tools to verify the website is fully responsive.
 
 ### Code Testing
 [HTML Validator](https://www.freeformatter.com/html-validator.html) -- No issues
@@ -161,33 +148,24 @@ Page is fully responsive.
 Tested a small group of people (3-4)
 
 ### Known Bugs
-- Pagination does not yet work correctly when using the search function. 
-- After submitting a review you are redirected to the courses page rather than the course review page.
+NEED TO DO 
 
 ## Deployment
-- The code was developed locally using the AWS Cloud9 IDE.
+- The code was developed locally using Gitpod.
 - Code was then pushed to GitHub.
-- Static files and user uploads where then configured to be hosted by AWS S3 buckets.
 - Travis was then used for continuous integration.
 - Code was then deployed on heroku.
 
-Deployed app can be viewed [here.](https://pizza-the-pie.herokuapp.com)
+Deployed app can be viewed [here.](INPUT)
 
-GitHub Repo [here](https://github.com/kennedydmb/pizza-the-pie/)
+GitHub Repo [here](INPUT)
 
-### For local deployment
-- Clone the project:
-` git clone https://github.com/kennedydmb/pizza-database-project`
-- Arrange contents so that the cloned document is in the root of the environment.
-- Following need to be installed
 
-`sudo pip3 install django=1.11` The framework used.
+`sudo pip3 install django=1.11` The framework used. - CHECK VERSION
 
 `sudo pip3 install Pillow` A python package that allows images to be uploaded. 
 
 `sudo pip3 install django-forms-bootstrap` To render our forms with bootstrap styling.
-
-- Create AWS account. Configure an S3 bucket for public access as a place to store user uploads and static files.
 
 `sudo pip3 install django-storages` To set up media and static transfer on S3
 
@@ -212,19 +190,15 @@ Set up environment variables on Heroku for:
 - STRIPE_SECRET
 - EMAIL_ADDRESS
 - EMAIL_PASSWORD
-- AWS_ACCESS_KEY_ID
-- AWS_SECRET_ACCESS_KEY
 
 - Link up GitHub
 - Run deploy.
 
 ### Content
-- Data created using current pizza shop knowledge. 
 - Course images sourced from [Unsplash.](https://unsplash.com/)
 - Logo made using [Paint.NET.](https://www.getpaint.net/) 
 
 ## Acknowledgements
 - Code Institute for the lessons and basis for the app.
 - Code Institute tutors from helping me out of difficult spots.
-- Code Institues student Slack, extremely helpful for picking up ideas and debugging issues.
 - Stack Overflow and W3Schools for finding answers to issues I was having, or to brush up on the basics.
