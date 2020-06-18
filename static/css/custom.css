@@ -1,4 +1,4 @@
-.nav-item {font-size: 13px;}
+.nav-item {font-size: 20px;}
 
 body { padding-top: 70px;
     display: flex;
@@ -6,7 +6,8 @@ body { padding-top: 70px;
     min-height: 100vh;
     background-color: #ffffff;
     width: 100%;
-    font-family: cursive; }
+    font-family: cursive; 
+    font-size: 20px;}
 
 
 @media screen and (min-width: 768px) {
