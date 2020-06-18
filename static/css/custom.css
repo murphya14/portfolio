@@ -1,4 +1,4 @@
-.nav-item {font-size: 13px}
+.nav-item {font-size: 13px;}
 
 body { padding-top: 70px;
     display: flex;
@@ -7,6 +7,7 @@ body { padding-top: 70px;
     background-color: #ffffff;
     width: 100%;
     font-family: cursive; }
+
 
 @media screen and (min-width: 768px) {
     body { padding-top: 100px; }
@@ -21,35 +22,7 @@ body { padding-top: 70px;
 }
 
 
-  html,
-  body,
-  header,
-  .view {
-    height: 100%;
-  }
-
-  @media (max-width: 740px) {
-    html,
-    body,
-    header,
-    .view {
-      height: 100vh;
-    }
-  }
-
-  .top-nav-collapse {
-    font: #78909c !important;
-  
-  }
-  
-
-
-  @media (max-width: 991px) {
-   .navbar:not(.top-nav-collapse) {
-    background: #78909c !important;
-   }
-  }
-  
+ 
   h1 {
     letter-spacing: 8px;
   }
@@ -58,8 +31,9 @@ body { padding-top: 70px;
     letter-spacing: 3px;
   }
 
+/*Line at the end of the content*/
   .hr-light {
-    border-top: 3px solid #fff;
+    border-top: 3px solid rgb(33, 103, 233);
     width: 80px;
   }
 
