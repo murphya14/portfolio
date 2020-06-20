@@ -12,9 +12,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
       <link rel="stylesheet" href="{% static 'js/stripe.js' %}">
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"/>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+      
       <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->
@@ -34,7 +40,7 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- MDB core JavaScript -->
     <script src="{% static 'js/mdb.min.js' %}"></script>
-    <!-- Your custom scripts (optional) -->
+    <!-- Your custom scripts  -->
     <script src="{% static 'js/custom.js' %}"></script>
     {% endblock head_js %}
 
@@ -73,7 +79,7 @@
                   
                   
                   {% if user.is_authenticated %}
-
+                    
                   <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"> My Profile</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
                   {%  else %}
@@ -110,6 +116,8 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-md-12 mb-4 text-center">
+
+
             <p class="h1-reponsive text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
               data-wow-delay="0.3s"><strong>{% block content %}
                      {% endblock %}

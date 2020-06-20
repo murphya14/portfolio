@@ -4,7 +4,12 @@
 {% block content %}
   <!--Section: Content-->
   <section>
-
+<!--Popover encouraging the user to leave a review -->
+     {% if user.is_authenticated %}
+<button type="button" class="btn btn-primary" data-toggle="popover" data-placement="left" title="popover on left"
+  data-content="We love to hear your experience of our products. Inform, inspire and review the product(s) you have bought. To do so, go to the product you purchased and select 'Leave a Review.' Thank you in advance!">Remember to leave a review!</button>
+ {% endif %}
+ <br>
     <!-- Section heading -->
     <h4 class="font-weight-bold font-italic blue-text">Hunt for your Passion. Hunt for your Hobby.</h4><br>
     <h2 class="text-center font-weight-bold mb-4 pb-2 indigo-text">Welcome to Hobby Hunt</h2>

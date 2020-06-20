@@ -20,15 +20,17 @@
         <div class="col-md-4 mb-4">
             <!--Card-->
     <div class="row">
+      
             <div class="card image_space">
                   
             <!--Card image-->
 
-            <div class="view overlay">
-                <img class="z-depth-3 card-img-top img-fluid" src="{{ MEDIA_URL }}{{ product.image }}" alt="Product image"></div> 
+            <div class="view overlay hobby_image">
+                <img class="z-depth-3 card-img-top img-fluid" src="{{ MEDIA_URL }}{{ product.image }}" alt="Product image"> 
                 <a href="{% url 'details' product.pk %}">
                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                 </a>
+            </div>
             
         
             <!--/.Card image-->

@@ -27,12 +27,12 @@
 
                  <h5 class="font-weight-bold my-4 pb-2 text-center dark-grey-text">{{ user }}</h5>
              
-                <h6 class="light-grey"> There are {{ product_count }} item(s) in your cart</h6>
+                <h6 class="dark-grey-text"> There are {{ product_count }} item(s) in your cart</h6>
 
                  <p><a class="btn btn-cyan font-weight-bold black-text" href="{% url 'view_cart' %}">View My Cart</a></p>
 
                 <div class="text-center">
-                     <p class="btn btn-cyan font-weight-bold black-text btn-rounded my-4 waves-effect"><a href="{% url 'password_reset' %}">Reset Password</a></p>
+                     <a class="btn btn-cyan font-weight-bold black-text my-4 waves-effect" href="{% url 'password_reset' %}">Reset Password</a>
                 </div>
 
               </div>
