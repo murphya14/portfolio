@@ -10,13 +10,15 @@
     <section class="px-md-7 mx-md-7 text-center text-lg-left dark-grey-text">
     <div class="col-md-4 col-md-offset-4">
 
+    <p class="text-center">If you do not have an account, please create one <a href="{% url 'registration' %}">here </a></p>
+
     <form class ="text-center" method="POST">
         {% csrf_token %} {{ login_form | as_bootstrap }}
-        <button class="btn btn-info my-4 btn-block" type="submit">Login</button>
+        <button class="btn btn-cyan font-weight-bold black-text  my-4 btn-block" type="submit">Login</button>
     </form>
 
     <br>
-     <div class="text-center" 
+     <div class="text-center">
     <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
     </div>
     </div>

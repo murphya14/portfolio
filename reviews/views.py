@@ -17,6 +17,7 @@ def product_review(request, id):
     return render(request, "review.html", {"reviews":reviews, "product":product})
 
 
+@login_required
 def add_review(request, id):
     product = get_object_or_404(hobby_product, pk=id)
     if request.method == "POST":

@@ -13,6 +13,7 @@ def view_cart(request):
     return render(request, "cart.html")
 
 
+@login_required
 def add_to_cart(request, id):
     """Add a quantity of the specified product to the cart"""
     hobby_products = hobby_product.objects.all()
@@ -25,6 +26,7 @@ def add_to_cart(request, id):
     return redirect(reverse('home'))
 
 
+@login_required
 def remove_cart_item(request, product_id):
     """ Remove single product item """
     cart = request.session.get('cart', {})
