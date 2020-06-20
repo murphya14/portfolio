@@ -60,21 +60,24 @@
 <p>{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
             
                     <p>
-            <a href="{% url 'reviews:product_review' product_detail.id %}"> Read Reviews </a>
+        
+             <a class="btn purple-gradient btn-lg ml-0 black-text font-weight-bold" href="{% url 'reviews:product_review' product_detail.id %}" role="button">Read Reviews</a>
                     </p>
     
-              </div>
+         
               
             
                 <!--  <small class="text-muted">No Reviews at this time</small> -->
 
 
 
-               <div class="col-xs-9">
                <p>
-                        <a href="{% url 'reviews:add_review' product_detail.id %}"> Leave a Review</a>
+               <a class="btn purple-gradient btn-lg ml-0 black-text font-weight-bold" href="{% url 'reviews:add_review' product_detail.id %}" role="button">Leave a Review</a>
+
                     </p>
-                   </div>       
+                   <button type="button" href="{% url 'all_hobby_products' %}" class="btn btn-outline-info waves-effect">Back</button>      
+                
+                   </div> 
          </div>
                   </div>
                            </div>

@@ -3,6 +3,7 @@
 {% load bootstrap_tags %}
 {% block content %}
     <h1>New Review for {{ product.name }}</h1>
+    <br>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}
