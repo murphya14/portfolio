@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
 {% extends "base.html" %}
+{% load bootstrap_tags %}
 {% block content %}
 
     <form method="POST">
-        {% csrf_token %} {{ login_form }}
+        {% csrf_token %} {{ login_form | as_bootstrap }}
         <button type="submit">Login</button>
     </form>
 

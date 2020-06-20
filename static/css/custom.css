@@ -1,5 +1,8 @@
 .nav-item {font-size: 16px;}
 
+/*Categories in the dropdown */
+
+
 body { padding-top: 70px;
     display: flex;
     flex-direction: column;
@@ -40,6 +43,9 @@ body { padding-top: 70px;
     border-top: 3px solid rgb(33, 103, 233);
     width: 80px;
   }
+
+  /*Forms*/
+
 
 
 
