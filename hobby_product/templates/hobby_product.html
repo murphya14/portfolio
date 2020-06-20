@@ -21,11 +21,11 @@
             <!--Card-->
     <div class="row">
             <div class="card image_space">
-                
+                  
             <!--Card image-->
 
             <div class="view overlay">
-                <img class="z-depth-3 card-img-top" src="{{ MEDIA_URL }}{{ product.image }}" alt="Product image"></div> 
+                <img class="z-depth-3 card-img-top img-fluid" src="{{ MEDIA_URL }}{{ product.image }}" alt="Product image"></div> 
                 <a href="{% url 'details' product.pk %}">
                 <div class="mask rgba-white-slight waves-effect waves-light"></div>
                 </a>
@@ -60,7 +60,6 @@
         </div>
 
 
-    </section>
     <!--Section: Content-->
 
         {% endfor %}
@@ -102,4 +101,7 @@
 <!-- End Pagination -->
 <!-- ./container -->
     </div>
+    
+    </section>
+     </div>
     {% endblock %}
