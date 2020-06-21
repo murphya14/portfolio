@@ -2,12 +2,13 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-    <h1>New Review for {{ product.name }}</h1>
+    <h1 class="indigo-text">New Review for {{ product.name }}</h1>
     <br>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}
-        <button type="submit" class="btn btn-info">Save</button>
+        <button type="submit" class="btn btn-info">Save</button><br>
+         <button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'details' product.pk %}">Back</a></button>     
     </form>
     </div>
 {% endblock %}

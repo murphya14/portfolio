@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -8,7 +8,7 @@
   <section class="text-center">
 
     <!-- Section heading -->
-    <h3 class="font-weight-bold mb-5">Find out More</h3>
+    <h3 class="font-weight-bold mb-5 indigo-text">Find out More</h3>
 
     <div class="row">
       <div class="col-lg-6">
@@ -37,7 +37,7 @@
 
             <p class="ml-xl-0 ml-4"><strong>Availability: </strong>In stock</p>
 <!--Add to cart-->
-             <div class="col-md-8 mb-4">
+            
 
             <form method="post" action="{% url 'add_to_cart' product_detail.id%}">
                 {% csrf_token %}
@@ -46,48 +46,34 @@
                 <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
                 <button class="btn btn-primary btn-rounded">
                  <i class="fas fa-cart-plus mr-2"type="submit" aria-hidden="true"></i> Add to Cart</button>  
-                </div>
-                 </div>
+              
+               
             </form>
+             
         
          <!--Review--> 
-          <div class="mt-6">
-            <p class="grey-text">Rating</p>
-            <div class="row text-center text-md-left">
-              <div class="col-md-4 col-12 ">
+          
+            <p class="text-md-left purple-text font-weight-bold ">Rating:</p>
+         
                 <!--Put in rating here-->
                 <!--Loops through reviews-->
-<p>{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i>
+<p class="text-md-left pink-text font-weight-bold ">{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i></p>
             
-                    <p>
-        
-             <a class="btn purple-gradient btn-lg ml-0 black-text font-weight-bold" href="{% url 'reviews:product_review' product_detail.id %}" role="button">Read Reviews</a>
-                    </p>
-    
-         
+                  
+     
+             <button type="button" class="btn btn-outline-secondary waves-effect">  <a class="black-text font-weight-bold" href="{% url 'reviews:product_review' product_detail.id %}" role="button">Read Reviews</a></button>
+                   
+
+          
+               <button type="button" class="btn btn-outline-secondary waves-effect"> <a class="black-text font-weight-bold"  href="{% url 'reviews:add_review' product_detail.id %}" role="button">Leave a Review</a></button>
               
-            
-                <!--  <small class="text-muted">No Reviews at this time</small> -->
 
-
-
-               <p>
-               <a class="btn purple-gradient btn-lg ml-0 black-text font-weight-bold" href="{% url 'reviews:add_review' product_detail.id %}" role="button">Leave a Review</a>
-
-                    </p>
-                   <button type="button" href="{% url 'all_hobby_products' %}" class="btn btn-outline-info waves-effect">Back</button>      
-                
-                   </div> 
+                   
+    
+                     <button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'all_hobby_products' %}">Back</a></button>      
          </div>
                   </div>
                            </div>
-                                    </div>
-                                             </div>
-                                                      </div>
-                                                               </div>
-                                                               
-
-
 
 
   <!--Section: Content-->

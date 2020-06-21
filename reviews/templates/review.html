@@ -2,15 +2,16 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-<div class="container">
+
     <div class="row">
 
         <!-- Header section -->
         <!-- Displays image on small screens and up -->
         <div class="header review-header hidden-xs">
+       
         <img class="img-fluid product rounded" src="{{ MEDIA_URL }}{{ product.image }}">
         </div>
-           
+         
             <p class="review-name">{{ product.product }}</p>
         </div>
 
@@ -36,7 +37,8 @@
                     <div class="input-group">
                         <input name="quantity" type="number" min="1" max="999" class="form-control qty-height" placeholder="Quantity" required>
                         <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
+                           <button class="btn btn-primary btn-rounded">
+                 <i class="fas fa-cart-plus mr-2"type="submit" aria-hidden="true"></i> Add to Cart</button>  
                         </span>
                     </div>
                     </div>
@@ -44,8 +46,8 @@
              
 <div class="col-md-8 mb-4">
                 <!-- If user is logged in they can leave a review -->
-                <a href="{% url 'reviews:add_review' product.id %}" class="btn btn-success review-btn"> Leave a review </a>
-
+                
+                  <button type="button" class="btn btn-outline-secondary waves-effect"> <a class="black-text font-weight-bold"  href="{% url 'reviews:add_review' product.id %}"  role="button">Leave a Review</a></button>
                 {% endif %}
             </div>
             </div>
@@ -63,8 +65,11 @@
                     <hr/>
                 </div>
                 {% endfor %}
+                
             </div>
+            
         </div>
+          <button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'details' product.pk %}">Back</a></button>     
     </div>
 </div>
 

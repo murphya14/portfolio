@@ -11,7 +11,7 @@
 <section>
       <!--Grid column-->
               <div class="card-body">
-                <h4 class="mb-4 mt-1 h5 text-center font-weight-bold">Summary</h4>
+                <h4 class="mb-4 mt-1 h5 text-center font-weight-bold indigo-text">Summary</h4>
                 <hr>
       {% for item in cart_items %}
             <!--Card-->
@@ -60,7 +60,7 @@
                 </dl>
               </div>
 
-
+<button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'all_hobby_products' %}">Back</a></button>    
 
 {% endblock %}
 

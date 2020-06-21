@@ -51,13 +51,16 @@ body { padding-top: 70px;
   /*Buttons*/
   .btn {font-size: 14px}
 
-
+  /*Card shown in Hobby_products and Category*/
 .hobby_image {
     height: 300px;   
 }
 
 .card-img-top{
     height:100%;
- 
 }
 
+/*Image in details.html.*/
+detail_image{
+height: 300px; 
+}
