@@ -1,4 +1,6 @@
 // popovers Initialization
 $(function () {
-$('[data-toggle="popover"]').popover()
+$('.popover').popover({
+container: 'body'
+})
 })

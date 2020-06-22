@@ -1,87 +1,54 @@
-<!DOCTYPE html>
-
 {% extends "base.html" %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
-<!DOCTYPE html>
-
-
 {% block content %}
-
 <section>
-      <!--Grid column-->
-              <div class="card-body">
-                <h4 class="mb-4 mt-1 h5 text-center font-weight-bold indigo-text">Summary</h4>
-                <hr>
+   <!--Grid column-->
+   <div class="card-body">
+      <h4 class="mb-4 mt-1 h5 text-center font-weight-bold indigo-text">Summary</h4>
+      <hr>
       {% for item in cart_items %}
-            <!--Card-->
-          
+      <!--Card-->
+      <!--Card content-->
+      <dl class="row">
+         <dd class="col-sm-8">
+            {{item.product.name}} 
+         </dd>
+         <dd class="col-sm-4">
+            {{ item.product.description }}
+         </dd>
+      </dl>
+      <hr>
+      <dl class="row">
+         <dd class="col-sm-8">
+            {{ item.product.price }}
+            <a href="{% url 'remove_cart_item' item.id %}" class="btn btn-danger">Remove Item</a>
+         </dd>
+      </dl>
+      <hr>
+      {% endfor %}
+      <dl class="row">
+         <dt class="col-sm-8">
+            Total
+         </dt>
+         <dt class="col-sm-4">
+            <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+            {% if product_count != 0 %}
+            <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+            {% else %}
+            <a href="{% url 'checkout' %}" class="btn btn-success disabled" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+            {% endif %}
+  
+        </dt>
+      </dl>
+   </div>
+   <button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'all_hobby_products' %}">Back</a></button>    
+   {% endblock %}
+   <!--/.</div>-->
 
-              <!--Card content-->
-      
-                <dl class="row">
-                  <dd class="col-sm-8">
-                    {{item.product.name}} 
-                  </dd>
-                  <dd class="col-sm-4">
-                    {{ item.product.description }}
-                  </dd>
-                </dl>
-             
-
-                <hr>
-
-                <dl class="row">
-                  <dd class="col-sm-8">
-                    {{ item.product.price }}
-
-                               <a href="{% url 'remove_cart_item' item.id %}" class="btn btn-danger">Remove Item</a>
-                  </dd>
-                </dl>
-
-                <hr>
-     
-   {% endfor %}
-                
-
-                <dl class="row">
-                  <dt class="col-sm-8">
-                    Total
-                  </dt>
-                  <dt class="col-sm-4">
-                     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-     {% if product_count != 0 %}
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-{% else %}
-  <a href="{% url 'checkout' %}" class="btn btn-success disabled" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-     {% endif %}
+   <!--Grid row-->
+   <div class="col-lg-4 mb-4">
+   <button class="btn btn-primary btn-lg btn-block" type="submit">Place order</button>
 </div>
-                  </dt>
-                </dl>
-              </div>
-
-<button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'all_hobby_products' %}">Back</a></button>    
-
-{% endblock %}
-
-
-
-            </div>
-            <!--/.Card-->
-
-
-
-          </div>
-          <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
-
-      </div>
-    </div>
-
-          <div class="col-lg-4 mb-4">
-
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Place order</button>
-  </section>
-  <!--Section: Content-->
+</section>
+<!--Section: Content-->
