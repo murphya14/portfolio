@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'js/stripe.js' %}">
     <!--Favicon-->
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"/>
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+    <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,7 +45,7 @@
     <!--Navbar-->
     <nav class="custom-nav navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}"><strong>Hobby Hunt</strong></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img class="img-fluid product rounded" src="{% static 'images/logo.ico' %}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
                 aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
                         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu category" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item category" href="{% url 'category' 'Arts & Craft' %}">Arts & Craft</a>
                             <a class="dropdown-item category" href="{% url 'category' 'music' %}">Music</a>
                             <a class="dropdown-item category" href="{% url 'category' 'games' %}">Games</a>
