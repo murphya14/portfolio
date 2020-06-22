@@ -7,6 +7,16 @@
 /*Categories in the dropdown */
 
 
+  /*Logo*/
+.custom-nav{
+    height:20px;
+}
+.image { 
+   height:100%
+}
+
+
+
 body { padding-top: 70px;
     display: flex;
     flex-direction: column;
