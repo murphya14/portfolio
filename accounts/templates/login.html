@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+{% load staticfiles %}
 {% block content %}
 <div class="container my-5 py-5 z-depth-1">
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
    <!--Section: Content-->
    <section class="px-md-7 mx-md-7 text-center text-lg-left dark-grey-text">
       <h4 class="text-center font-weight-bold font-italic blue-text">Hunt for your Passion. Hunt for your Hobby.</h4>

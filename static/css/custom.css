@@ -6,18 +6,13 @@
 
 /*Categories in the dropdown */
 
-
-  /*Logo*/
-.custom-nav{
-    height:20px;
-}
-.image { 
-   height:100%
+.nav-hobby {
+     font-size: 20;
 }
 
 
 
-body { padding-top: 70px;
+body { padding-top: 50px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

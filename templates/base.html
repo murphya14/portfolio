@@ -45,13 +45,11 @@
     <!--Navbar-->
    
     <nav class="custom-nav navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
-         <div class="image">
-         <a class="text-left" href="{% url 'home' %}" target="_blank">
-          <img  class="img-fluid" src="{% static 'images/logo.png' %}" alt="Logo">
-        </a>
-         </div>
 
         <div class="container">
+        <div class="nav-hobby">
+         <a class="navbar-brand text-warning nav-hobby hoverable" href="{% url 'home' %}"><strong>Hobby Hunt</strong></a>
+        </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
                 aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -97,8 +95,7 @@
                 </form>
             </div>
         </div>
-    </nav>
-
+    </nav>         
     <!-- Messages -->
     <section class="container">
         {% if messages %}

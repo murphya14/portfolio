@@ -1,6 +1,4 @@
 // popovers Initialization
-$(function () {
-$('.popover').popover({
-container: 'body'
-})
-})
+$(document).ready(function(){
+  $('#myPopover').popover();
+});

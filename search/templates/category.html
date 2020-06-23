@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
 <div class="container mt-5">
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
    <!--Section: Content-->
    <section class="text-center">
    <!-- Section heading -->

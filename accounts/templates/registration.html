@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+{% load staticfiles %}
 <div class="container my-5 py-5 z-depth-1">
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
 <!--Section: Content-->
 <section class="px-md-7 mx-md-7 text-center text-lg-left dark-grey-text">
    <p class="text-center">If you already have an account, sign in <a href="{% url 'login' %}">here </a></p>

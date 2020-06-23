@@ -1,8 +1,14 @@
 {% extends "base.html" %}
-{% load static from staticfiles %}
+{% load staticfiles %}
 {% load bootstrap_tags %}
 {% block content %}
 <section>
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
    <!--Grid column-->
    <div class="card-body">
       <h4 class="mb-4 mt-1 h5 text-center font-weight-bold indigo-text">Summary</h4>

@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+{% load staticfiles %}
 <div class="container my-5 px-0 z-depth-1">
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
    <!--Section: Content-->
    <section class="p-5 my-md-5 text-center" 
       style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-size: cover; background-position: center center;">

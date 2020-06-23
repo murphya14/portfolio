@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
 <!--Section: Content-->
 <section class="text-center">
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
     <!-- Section heading -->
     <h3 class="font-weight-bold mb-5">The Store</h3>
     {% if products %}

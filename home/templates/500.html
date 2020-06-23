@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
+     <!-- Logo -->
+       <div class="image text-center">
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+         </a>
+        </div>
 <div class="row row-flex">
 <h1> 500 Error </h1>
 </div>
