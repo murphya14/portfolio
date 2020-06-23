@@ -7,7 +7,11 @@
 /*Categories in the dropdown */
 
 .nav-hobby {
-     font-size: 20;
+    font-size: 30px;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    line-height: inherit;
+    white-space: nowrap;
 }
 
 
@@ -25,6 +29,7 @@ body { padding-top: 50px;
 @media screen and (min-width: 768px) {
     body { padding-top: 100px; }
 }
+.feature {color: #1d9ce5;}
 
 /*Find Hobby page */
 .image_space { margin-left: 10px;}
