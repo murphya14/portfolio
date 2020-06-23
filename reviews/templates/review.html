@@ -17,7 +17,7 @@
 <!-- Review area, with product details, add to cart option, reviews and leave a review option -->
 <div class="row review-info-area light-text">
    <div class="col-xs-12 col-sm-6 col-md-6">
-      <span class="sort-inline review-inner-header">Description</span>
+      <span class="sort-inline review-inner-header indigo-text">Description</span>
       <hr class="hr-dark-grey" />
       <p class="description">{{ product.description }}</p>
       <hr class="hr-dark-grey" />
@@ -42,12 +42,12 @@
    </div>
    <!-- Displays the most recent 10 reviews -->
    <div class="col-xs-12 col-sm-6 col-md-6">
-      <span class="sort-inline review-inner-header">Reviews (Most recent 5)</span>
+      <span class="sort-inline review-inner-header indigo-text">Reviews (Most recent 5)</span>
       <hr class="hr-dark-grey" />
       <!-- Loops through each review in reviews -->
       {% for review in reviews %}
       <div>
-         <p>{{ review.rating }} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ review.author | upper }}</p>
+         <p>{{ review.rating }} <i class="fa fa-star star-color text-warning" aria-hidden="true"></i> - {{ review.author | upper }}</p>
          <p>{{ review.content }} </p>
          <hr/>
       </div>
