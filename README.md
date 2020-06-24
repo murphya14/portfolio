@@ -1,6 +1,9 @@
-# Django Frameworks
+# Django Frameworks for Full Stack Web Development 
 
-[![Build Status]()](https://travis-ci.org/)
+[![Build Status] NEED TO CHECK 
+
+![Hobby Hunt Logo](https://github.com/murphya14/Hobby_Hunt-/blob/master/static/images/logo.png)
+
 
 ## Milestone 4: Hobby Hunt
 ### Aim of the project
@@ -14,38 +17,72 @@ External users goals
 - Be able to make a secure payment.
 - Be able to review their cart and remove any items that they no longer wish to purchase. 
 
-
 Site owners goals
 - Earn money selling products on the ecommerce platform. 
 - Advertise effectively
 - Gather feedback from customers which will inform business descisions such as stock control. 
 
-### The application
+Consumers want to be inspired and challenged. Hobby Hunt meets this need by being the one-stop-shop for 
+all hobby needs. By stocking beginner-advance products, it is accessible to all ages and skill levels.
+
+Welcome to [Hobby Hunt!](https://hobbyhunt.herokuapp.com/)
+
+### The application -lOOKAT
 An application that allows users to browse products to enhance or begin a hobby. 
 Create and account to purchase hobby products as well as create reviews.
 Allows users to purchase products using Stripe.
 
 [Deployed on Heroku](.herokuapp.com)
 
-## UX
-A responsive app ?? 
+## UX -NEED TO ADD IN THE WIREFRAMES 
+The basis for the UX started with a mobile first approach and afterwards, the larger screens as shown in the 
+[wireframes.](https://github.com//mockups_wireframes).
+The design is simple in order to showcase the products and provide a straight-forward/familar layout to users. 
 
-### Users
-At this stage the intended users are anyone that would like to browse or purchase products for a hobby.
-This app allows a business for all types of hobby products to advertised and sell their stock. 
-The app could be used to gather customer sentiment and feedback through the reviews.  
+To determine the goals for the website, the following user stories were taken into account:
 
-### User Stories.
-- As a business owner I want an online platform to increase sales and allow customers and potential customers to 
+1. I want a site where I can buy a product specifically for a hobby.
+2. I want to be able to specify the hobby through category in order to filter the products.
+3. I want to understand how other consumers felt about the product.
+4. I want to buy off of a transparent company and so, be able to leave a review on my purchases.
+5. I want to be able to see more detail about the product (more than just the image and price.)
+6. I want to be able to use a search engine to filter products.
+7. I want to able to have pagination on pages.
+8. I want to be able to view my cart and remove items if needed.
+9. I want to be able to pay securely. 
+10. I want to be able to register and log in to my personal account. 
+11. I want to be able to navigate easily throughout the site by using back buttons and obvious links.
+12. As a business owner I want an online platform to increase sales and allow customers and potential customers to 
 have ease of access to the products for sale as well as all the information about the products. 
-- As a business owner I want my customers to share their experience of a product to aid business decisions regarding stock levels.
+13. As a business owner I want my customers to share their experience of a product to aid business decisions regarding stock levels.
 This in time will create a business with a strong reputation for quality. 
+ 
 
-### Wireframe
-Wireframe can be found [here](/WIREFRAME.md "Wireframe")
+The navbar and the footer are both responsive. The navbar becomes a burger menu when reduced in size.
+Based on the authentication of the user, the links can vary. If the user is not logged in "Registration" and "Login" are in the navbar.
+If the user is logged in, then "My Profile", "Logout" and "Cart" appear in the navbar. 
+The footer is centered at the bottom of the page and is a simple footer that has the social media icons and the copyright.
+
+When the user first navigates to the site, they are directed to the login page. Here there is the option to register and create an account or log in with existing credentials.
+The main logo is above the login page and a caption entended to encourage users to go further into the site. 
+The forms are in the same format. All are very plain with the logo displaying prominently on the page. 
+
+Once the user is logged in, they are directed to the Home page. Here the use of the site is outlined and there is a carousel of products to advertise the range of products.
+There is a Mark Twain quote to portray the atmosphere of adventure and curiosity to the user. 
+There is a call to action button "Start Exploring" that navigates the user to the pages of products available.
+This page is consistent in it's simplicity in order to gently guide the user and convey the ease of use to the user.
+
+The pages "Find a Hobby" and "Category" display cards that contain an image, average rating calculated from reviews and the price.
+It is a very simple and clear way of displaying consistent information for all products. 
+
+The reviews are laid out so the consumer can easily read the comments while also being encouraged to add to cart as the option is there.
+
+The shopping cart gives a clear and transparent view of all items added. This then shows a total.
+The number of items in the cart is visible from the navbar as the cart icon will display a number (if not zero.)
 
 ### Design
-For the color palate I used this 
+The colour scheme is a playful blue, white and yellow. These soft colours are in line with the fun and curiousity that a hobby ignites.
+There is aspects of purples and pinks to call attention to particular buttons and pieces of information. These colours fit in with the playful nature of the sites. 
 
 ## Features
 
@@ -103,6 +140,9 @@ The average is calculated from all of the reviews and the result is displayed on
 #### Deactivate account
 - Ability for users to deactivate account.
 
+#### Track stock
+- Ability for the business owner to track stock. 
+
 
 
 ## Technologies Used
@@ -133,7 +173,8 @@ The project makes use of:
  -- An API that allows individuals and businesses to make and receive payments over the Internet.
  - [Postgres](https://www.postgresql.org/)
  -- A free and open-source relational database management system emphasizing extensibility and technical standards compliance.
-
+ - Google Chrome Developer Tools
+ 
 ## Testing
 
 ### Responsiveness
