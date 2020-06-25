@@ -238,7 +238,7 @@ Deployed app can be viewed [here.](INPUT)
 GitHub Repo [here](INPUT)
 
 
-`sudo pip3 install django=1.11` The framework used.
+`sudo pip3 install django=1.11.29` The framework used.
 
 `sudo pip3 install Pillow` A python package that allows images to be uploaded. 
 
