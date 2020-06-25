@@ -23,7 +23,7 @@
             <strong>Category: </strong>{{ product_detail.category }}
          </p>
          <p class="ml-xl-0 ml-4">{{ product_detail.description }}</p>
-         <p class="ml-xl-0 ml-4"><strong>Availability: </strong>In stock</p>
+        
          <!--Add to cart-->
          <form method="post" action="{% url 'add_to_cart' product_detail.id%}">
             {% csrf_token %}

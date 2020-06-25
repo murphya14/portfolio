@@ -183,7 +183,7 @@ The project makes use of:
 This was created using Django built-in authentication for login and register for users. 
 Additionally, I created a profile for the user.  
 
-*Note to assessors, please use the following to log into the admin dashboard: assessor / assessor
+*Note to assessors, please use the following to log into the admin dashboard: superuser / hobbyhunt
 
 **Note to assessors, To view as a user, Please use the following accounts:
 
