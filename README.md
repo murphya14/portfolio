@@ -174,7 +174,43 @@ The project makes use of:
  - [Postgres](https://www.postgresql.org/)
  -- A free and open-source relational database management system emphasizing extensibility and technical standards compliance.
  - Google Chrome Developer Tools
- 
+
+## Functionality 
+
+### Apps
+
+#### Accounts
+This was created using Django built-in authentication for login and register for users. 
+Additionally, I created a profile for the user.  
+
+*Note to assessors, please use the following to log into the admin dashboard: assessor / assessor
+
+**Note to assessors, To view as a user, Please use the following accounts:
+
+mary / mary
+john / john
+
+
+#### Home 
+The function of this app is the render a Home page. 
+
+#### Hobby Product
+This app contains the vast majority of the CRUD elements of the site. It interacts with other apps.
+In hindsight, the naming of this app was too similar to the project and this caused issues. 
+
+#### Cart
+The cart shows the amount of items the user has before purchase and also gives the user the ability to remove items from the cart. 
+
+#### Checkout
+Checkout is handled using the secure payment process implemented using Stripe.
+
+#### Reviews
+The Review app allows the user to browse other users reviews and if they hold an account, the user can also leave a review.
+The review app also allows an average rating to be calculated based on consumers feedback. 
+
+#### Search
+The search app holds the logic for the different categories. 
+
 ## Testing
 
 ### Responsiveness
@@ -202,7 +238,7 @@ Deployed app can be viewed [here.](INPUT)
 GitHub Repo [here](INPUT)
 
 
-`sudo pip3 install django=1.11` The framework used. - CHECK VERSION
+`sudo pip3 install django=1.11` The framework used.
 
 `sudo pip3 install Pillow` A python package that allows images to be uploaded. 
 
@@ -237,9 +273,13 @@ Set up environment variables on Heroku for:
 
 ### Content
 - Course images sourced from [Unsplash.](https://unsplash.com/)
-- Logo made using [Paint.NET.](https://www.getpaint.net/) 
+- Logo made using [Canva.com.](https://www.canva.com/) 
+- Tab icon was made using [Favicon.com.](https://favicon.io/) 
 
 ## Acknowledgements
 - Code Institute for the lessons and basis for the app.
-- Code Institute tutors from helping me out of difficult spots.
-- Stack Overflow and W3Schools for finding answers to issues I was having, or to brush up on the basics.
+- Code Institute tutors from their guidance and expertise. 
+- Stack Overflow and W3Schools for trouble-shooting. 
+
+## Disclaimer 
+This is for educational purpose only 
