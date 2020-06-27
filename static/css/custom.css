@@ -5,6 +5,7 @@
 .category {font-size: 18px}
 
 /*Categories in the dropdown */
+.navbar .dropdown-menu a {font-size: 14px !important}
 
 .nav-hobby {
     font-size: 30px;
