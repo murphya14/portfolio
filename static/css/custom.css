@@ -26,6 +26,8 @@ body { padding-top: 50px;
     font-family: cursive; 
     font-size: 14px;}
 
+.carousel-image {height: 400px;}
+
 
 @media screen and (min-width: 768px) {
     body { padding-top: 100px; }
