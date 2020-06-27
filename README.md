@@ -1,6 +1,6 @@
 # Django Frameworks for Full Stack Web Development 
 
-[![Build Status] NEED TO CHECK 
+[![Build Status] NEED TO CHECK TRAVIS https://travis-ci.com/github/murphya14/Hobby_Hunt-
 
 ![Hobby Hunt Logo](https://github.com/murphya14/Hobby_Hunt-/blob/master/static/images/logo.png)
 
@@ -27,16 +27,16 @@ all hobby needs. By stocking beginner-advance products, it is accessible to all 
 
 Welcome to [Hobby Hunt!](https://hobbyhunt.herokuapp.com/)
 
-### The application -lOOKAT
+### The application 
 An application that allows users to browse products to enhance or begin a hobby. 
 Create and account to purchase hobby products as well as create reviews.
 Allows users to purchase products using Stripe.
 
-[Deployed on Heroku](.herokuapp.com)
+[Deployed on Heroku](https://hobbyhunt.herokuapp.com)
 
 ## UX -NEED TO ADD IN THE WIREFRAMES 
 The basis for the UX started with a mobile first approach and afterwards, the larger screens as shown in the 
-[wireframes.](https://github.com//mockups_wireframes).
+[wireframes.](https://github.com/murphya14/Hobby_Hunt-/tree/develop/wireframes).
 The design is simple in order to showcase the products and provide a straight-forward/familar layout to users. 
 
 To determine the goals for the website, the following user stories were taken into account:
@@ -188,7 +188,7 @@ Additionally, I created a profile for the user.
 **Note to assessors, To view as a user, Please use the following accounts:
 
 mary / mary
-john / john
+Jane / jane
 
 
 #### Home 
@@ -217,15 +217,15 @@ The search app holds the logic for the different categories.
 Used developer tools to verify the website is fully responsive.
 
 ### Code Testing
-[HTML Validator](https://www.freeformatter.com/html-validator.html) -- No issues
+[HTML Validator](https://www.freeformatter.com/html-validator.html) 
 
-[CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) -- No issues
+[CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 
 ### User Testing
 Tested a small group of people (3-4)
 
 ### Known Bugs
-NEED TO DO 
+Images are poor to load.  
 
 ## Deployment
 - The code was developed locally using Gitpod.
@@ -233,9 +233,9 @@ NEED TO DO
 - Travis was then used for continuous integration.
 - Code was then deployed on heroku.
 
-Deployed app can be viewed [here.](INPUT)
+Deployed app can be viewed [here.](https://hobbyhunt.herokuapp.com)
 
-GitHub Repo [here](INPUT)
+GitHub Repo [here](https://github.com/murphya14/Hobby_Hunt-)
 
 
 `sudo pip3 install django=1.11.29` The framework used.
@@ -265,8 +265,6 @@ GitHub Repo [here](INPUT)
 Set up environment variables on Heroku for:
 - STRIPE_PUBLISHABLE
 - STRIPE_SECRET
-- EMAIL_ADDRESS
-- EMAIL_PASSWORD
 
 - Link up GitHub
 - Run deploy.
