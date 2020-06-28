@@ -11,21 +11,21 @@ from django.db.models import Avg
 
 class hobby_product(models.Model):
 
-    ARTS_AND_CRAFT = 'Arts & Craft'
+    ARTS_AND_CRAFT = 'art'
     MUSIC = 'music'
     GAMES = 'games'
     COLLECTORS = 'collectors'
     ACADEMIC = 'academic'
     NONE = 'NUL'
-    SPORT = 'sport and outdoors'
+    SPORT = 'sport'
     OTHER = 'other'
     CATEGORIES = (
         (NONE, 'Select a category'),
-        (ARTS_AND_CRAFT, 'Arts & Craft'),
+        (ARTS_AND_CRAFT, 'Art'),
         (MUSIC, 'Music'),
         (GAMES, 'Games'),
         (COLLECTORS, 'Collectors'),
-        (SPORT, 'Sport & outdoors'),
+        (SPORT, 'Sport'),
         (ACADEMIC, 'Academic & Educational'),
         (OTHER, 'other')
     )
