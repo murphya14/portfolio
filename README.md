@@ -25,18 +25,18 @@ Site owners goals
 Consumers want to be inspired and challenged. Hobby Hunt meets this need by being the one-stop-shop for 
 all hobby needs. By stocking beginner-advance products, it is accessible to all ages and skill levels.
 
-Welcome to [Hobby Hunt!](https://hobbyhunt.herokuapp.com/)
+Welcome to [Hobby Hunt!](https://hobbyhunt.herokuapp.com/accounts/login/)
 
 ### The application 
 An application that allows users to browse products to enhance or begin a hobby. 
 Create and account to purchase hobby products as well as create reviews.
 Allows users to purchase products using Stripe.
 
-[Deployed on Heroku](https://hobbyhunt.herokuapp.com)
+[Deployed on Heroku](https://hobbyhunt.herokuapp.com/accounts/login/)
 
 ## UX -NEED TO CHECK WIREFRAME LINK 
 The basis for the UX started with a mobile first approach and afterwards, the larger screens as shown in the 
-[wireframes.](https://github.com/murphya14/Hobby_Hunt-/tree/develop/wireframes).
+[wireframes.](https://github.com/murphya14/Hobby_Hunt-/tree/master/wireframes).
 The design is simple in order to showcase the products and provide a straight-forward/familar layout to users. 
 
 To determine the goals for the website, the following user stories were taken into account:
