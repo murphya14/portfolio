@@ -34,7 +34,7 @@ Allows users to purchase products using Stripe.
 
 [Deployed on Heroku](https://hobbyhunt.herokuapp.com)
 
-## UX -NEED TO ADD IN THE WIREFRAMES 
+## UX -NEED TO CHECK WIREFRAME LINK 
 The basis for the UX started with a mobile first approach and afterwards, the larger screens as shown in the 
 [wireframes.](https://github.com/murphya14/Hobby_Hunt-/tree/develop/wireframes).
 The design is simple in order to showcase the products and provide a straight-forward/familar layout to users. 
@@ -187,7 +187,7 @@ Additionally, I created a profile for the user.
 
 **Note to assessors, To view as a user, Please use the following accounts:
 
-mary / mary
+Harry / harry
 Jane / jane
 
 
@@ -238,23 +238,24 @@ Deployed app can be viewed [here.](https://hobbyhunt.herokuapp.com)
 GitHub Repo [here](https://github.com/murphya14/Hobby_Hunt-)
 
 
-`sudo pip3 install django=1.11.29` The framework used.
+`pip3 install django=1.11.29` The framework used.
 
-`sudo pip3 install Pillow` A python package that allows images to be uploaded. 
+`pip3 install Pillow` A python package that allows images to be uploaded. 
 
-`sudo pip3 install django-forms-bootstrap` To render our forms with bootstrap styling.
+`pip3 install django-forms-bootstrap` To render our forms with bootstrap styling.
 
-`sudo pip3 install django-storages` To set up media and static transfer on S3
+`pip3 install django-storages` To set up media and static transfer on S3
 
 `python3 manage.py collectstatic` To send all media and static directories to S3
 
-`sudo pip3 install psycopg2`
-`sudo pip3 install dj-database-url==0.5.0` To handle postgres database.
+`pip3 install psycopg2`
+
+`pip3 install dj-database-url==0.5.0` To handle postgres database.
 
 - Create a new app on Heroku and link to your local repo.
 - Create a requirements.txt and Procfile.
 
-`sudo pip3 freeze --local > requirements.txt` To tell Heroku what packages are required to run this program.
+`pip3 freeze --local > requirements.txt` To tell Heroku what packages are required to run this program.
 
 `echo web: python app.py > Procfile` To tell Heroku what type of application this is.
 
