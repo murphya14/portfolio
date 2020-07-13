@@ -1,4 +1,5 @@
-from django.shortcuts import render
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from hobby_product.models import hobby_product
 from datetime import datetime
 from django.shortcuts import render, redirect
@@ -6,26 +7,30 @@ from django.db.models import Q
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-
 # Create your views here.
+
 def do_search(request):
-    '''Use keyword to get products'''
+    """Use keyword to get products"""
+
     if request.method == 'GET':
         keyword = request.GET.get('q')
 
         keyword_obj = []
 
-        if keyword is None or keyword == "":
-            messages.error(request, 'Please enter in a keyword to search')
+        if keyword is None or keyword == '':
+            messages.error(request,
+                           'Please enter in a keyword to search')
             return redirect('all_hobby_products')
-
         elif keyword:
-            keyword_lookup = hobby_product.objects.filter(Q(name__icontains=keyword) | \
-                Q(description__icontains=keyword))
+
+            keyword_lookup = \
+                hobby_product.objects.filter(Q(name__icontains=keyword)
+                    | Q(description__icontains=keyword))
             for item in keyword_lookup:
                 keyword_obj.append(item)
 
-            return render(request, 'hobby_product.html', {'products': hobby_product})
+            return render(request, 'hobby_product.html',
+                          {'products': hobby_product})
     else:
         return redirect('all_hobby_products')
 
@@ -35,11 +40,14 @@ def category(request, category):
 
     today = datetime.today()
     product_objects = hobby_product.objects.filter(category=category)
-    
+
     try:
-        product_objects = hobby_product.objects.filter(category=category)
+        product_objects = \
+            hobby_product.objects.filter(category=category)
     except:
-        messages.info(request, 'Sorry there are no products in this category at this time')
+        messages.info(request,
+                      'Sorry there are no products in this category at this time'
+                      )
         return redirect('hobby_products')
 
     paginator = Paginator(product_objects, 6)
@@ -48,11 +56,15 @@ def category(request, category):
     try:
         product_objects = paginator.page(page)
     except PageNotAnInteger:
+
         # If the page is not an integer, deliver first page.
+
         product_objects = paginator.page(1)
     except EmptyPage:
+
         # If page is not an integer, deliver first page.
+
         product_objects = paginator.page(paginator.num_pages)
 
-
-    return render(request, 'category.html', {'products': product_objects, 'category': category})
+    return render(request, 'category.html',
+                  {'products': product_objects, 'category': category})

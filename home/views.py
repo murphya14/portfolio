@@ -1,7 +1,5 @@
 from django.shortcuts import render
-
 from hobby_product.models import hobby_product
-
 
 def home(request):
     """ Return home page """

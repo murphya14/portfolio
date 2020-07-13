@@ -1,10 +1,6 @@
 from django.db import models
 from django.utils import timezone
-import datetime
 from django.contrib.auth.models import User
-import numpy as np
-from django.contrib.auth.models import User
-from math import ceil
 from hobby_product.models import hobby_product
 
 class Review(models.Model):
@@ -31,6 +27,6 @@ def __unicode__(self):
         return self.title
 
 
-'''Create a str of the model'''
+"""Create a str of the model"""
 def __str__(self):
             return "Product " + str(self.pk) + " " + self.name

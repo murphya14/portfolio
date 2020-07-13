@@ -1,10 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
-import numpy as np
 from django.contrib.auth.models import User
-from datetime import timedelta, datetime, timezone
-from math import ceil
-from django.utils import timezone
+from datetime import datetime
 from django.db.models import Avg
 
 

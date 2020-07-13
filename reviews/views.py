@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -6,12 +5,10 @@ from .forms import ReviewForm
 from .models import Review
 import datetime
 from django.conf import settings
-from django.utils import timezone
 from hobby_product.models import hobby_product
 from django.contrib.auth.models import User
 
 def product_review(request, id):
-
     product = get_object_or_404(hobby_product, pk=id)
     reviews = Review.objects.filter(product = id).order_by('-published_date')[:5]
     return render(request, "review.html", {"reviews":reviews, "product":product})
