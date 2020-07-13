@@ -9,12 +9,13 @@ from reviews.models import Review
 
 
 def all_hobby_products(request):
-    try:
-        products = hobby_product.objects.all()
-    except:
+    
+    products = hobby_product.objects.all()
+    
+    if products is None:
         messages.info(request, 'Sorry there are none in stock at this time')
         return redirect('hobby_product.html')
-
+        
     paginator = Paginator(products, 6)
 
     page = request.GET.get('page')

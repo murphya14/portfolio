@@ -17,27 +17,19 @@ def do_search(request):
 
         keyword_obj = []
 
-        if keyword is None or keyword == '':
+        if keyword is None:
             messages.error(request,
                            'Please enter in a keyword to search')
             return redirect('all_hobby_products')
         elif keyword:
-
-            keyword_lookup = \
-                hobby_product.objects.filter(Q(name__icontains=keyword)
-                    | Q(description__icontains=keyword))
-            for item in keyword_lookup:
-                keyword_obj.append(item)
-
-            return render(request, 'hobby_product.html',
-                          {'products': hobby_product})
+            keyword_lookup = list(hobby_product.objects.filter(Q(name__icontains=keyword) | Q(description__icontains=keyword)))
+            
+            return render(request, 'hobby_product.html', {'products': keyword_obj})
     else:
         return redirect('all_hobby_products')
 
-
 def category(request, category):
     """ Show products based on the category selected """
-
     today = datetime.today()
     product_objects = hobby_product.objects.filter(category=category)
 

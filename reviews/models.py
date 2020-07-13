@@ -20,13 +20,8 @@ class Review(models.Model):
         rating = models.IntegerField(choices=RATING_CHOICES, default=5, blank=False)
         product = models.ForeignKey(hobby_product, default=None)
 
-
-
-
-def __unicode__(self):
-        return self.title
-
-
-"""Create a str of the model"""
-def __str__(self):
+        def __unicode__(self):
+            return self.title
+    
+        def __str__(self):
             return "Product " + str(self.pk) + " " + self.name

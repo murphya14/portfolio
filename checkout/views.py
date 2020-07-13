@@ -10,7 +10,7 @@ import stripe
 
 # Create your views here.
 stripe.api_key = settings.STRIPE_SECRET
-
+YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]
 
 @login_required()
 def checkout(request):
@@ -27,7 +27,7 @@ def checkout(request):
             total = 0
             for id, quantity in cart.items():
                 product = get_object_or_404(hobby_product, pk=id)
-                total += quantity * hobby_product.price
+                total += quantity * product.price
                 order_line_item = OrderLineItem(
                     order=order,
                     product=hobby_product,

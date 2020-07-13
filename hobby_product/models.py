@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from django.db.models import Avg
 
-
-
 class hobby_product(models.Model):
 
     ARTS_AND_CRAFT = 'art'

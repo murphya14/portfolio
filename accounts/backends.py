@@ -1,7 +1,9 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from django.contrib.auth.models import User
 
-
 class EmailAuth:
+
     """Authenticate a user by an exact match on the email and password"""
 
     def authenticate(self, username=None, password=None):
@@ -19,12 +21,12 @@ class EmailAuth:
             return None
         except User.DoesNotExist:
             return None
-    
+
     def get_user(self, user_id):
         """
         Used by the Django authentiation system to retrieve a user instance
         """
-        
+
         try:
             user = User.objects.get(pk=user_id)
 
