@@ -23,15 +23,18 @@ body { padding-top: 50px;
     min-height: 100vh;
     background-color: #ffffff;
     width: 100%;
-    font-family: cursive; 
+    font-family: Tahoma, Geneva, sans-serif; 
     font-size: 14px;}
 
 .carousel-image {height: 400px;}
 
 
 @media screen and (min-width: 768px) {
-    body { padding-top: 100px; }
+    body { padding-top: 100px;}
 }
+
+
+
 .feature {color: #1d9ce5;}
 
 /*Find Hobby page */

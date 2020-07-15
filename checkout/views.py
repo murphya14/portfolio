@@ -10,7 +10,7 @@ import stripe
 
 # Create your views here.
 stripe.api_key = settings.STRIPE_SECRET
-YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]
+YEAR_CHOICES = [(i, i) for i in range(2020, 2036)]
 
 @login_required()
 def checkout(request):

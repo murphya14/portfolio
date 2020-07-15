@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from django import forms
-from models import Order
+from .models import Order
 
 
 class MakePaymentForm(forms.Form):

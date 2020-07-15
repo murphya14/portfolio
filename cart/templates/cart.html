@@ -17,19 +17,20 @@
       <!--Card-->
       <!--Card content-->
       <dl class="row">
-         <dd class="col-sm-8">
+         <dd class="col-sm-8 font-weight-bold">
             {{item.product.name}} 
          </dd>
          <dd class="col-sm-4">
             {{ item.product.description }}
          </dd>
       </dl>
-      <hr>
       <dl class="row">
          <dd class="col-sm-8">
-            {{ item.product.price }}
             <a href="{% url 'remove_cart_item' item.id %}" class="btn btn-danger">Remove Item</a>
          </dd>
+        <dd class="col-sm-4 text-success">
+            <strong>{{ item.product.price }}</strong>
+         </dd>            
       </dl>
       <hr>
       {% endfor %}
