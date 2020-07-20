@@ -1,6 +1,6 @@
 # Django Frameworks for Full Stack Web Development 
 
-[![Build Status](https://travis-ci.com/github/murphya14/Hobby_Hunt-/builds/176202685)](https://travis-ci.com/github/murphya14/Hobby_Hunt-)
+[![Build Status](https://travis-ci.com/murphya14/Hobby_Hunt-.svg?branch=master)](https://travis-ci.com/github/murphya14/Hobby_Hunt-)
 
 
 ![Hobby Hunt Logo](https://github.com/murphya14/Hobby_Hunt-/blob/master/static/images/logo.png)
