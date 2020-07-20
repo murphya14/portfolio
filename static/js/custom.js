@@ -1,4 +1,10 @@
 // popovers Initialization
 $(document).ready(function(){
-  $('#myPopover').popover();
+  
+ document.getElementById("log_out").addEventListener("click", myFunction);
+
+function myFunction() {
+  alert ("Logging out will remove all items from the cart");
+}
+
 });
