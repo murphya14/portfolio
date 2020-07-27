@@ -39,6 +39,10 @@ body { padding-top: 0px;
     margin-right: 0!important;}
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
+    display: none !important;
+}
+
 
 .feature {color: #1d9ce5;}
 
