@@ -27,27 +27,17 @@
     <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    {% block head_js %}
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <!-- Bootstrap tooltips -->
-        <script src="{% static 'js/popper.min.js' %}"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <!-- MDB core JavaScript -->
-        <script src="{% static 'js/mdb.min.js' %}"></script>
-        <!-- Your custom scripts  -->
-        <script src="{% static 'js/custom.js' %}"></script>
-    {% endblock head_js %}
+
 </head>
 <body>
 
     <!-- Fixed masthead -->
     <!--Navbar-->
-   
-    <nav class="custom-nav navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+   <header>
+    <nav class="custom-nav navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
 
         <div class="container">
-        <div class="nav-hobby">
+        <div class="nav-hobby"> 
          <a class="navbar-brand text-warning nav-hobby hoverable" href="{% url 'home' %}"><strong>Hobby Hunt</strong></a>
         </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
@@ -96,18 +86,27 @@
                 </form>
             </div>
         </div>
-    </nav>         
+    </nav>    
+    </header>     
     <!-- Messages -->
     <section class="container">
-        {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
+{% if messages %}
+    {% regroup messages|dictsort:"tags" by tags as message_list  %}
+    {% for tags in message_list %}
+        <div class="alert alert-{{ tags.grouper }}">
+            <div class="container">
+                <ul>
+                    {% for message in tags.list %}
+                        <li>
+                              {{ message }}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             </div>
         </div>
-        {% endif %}
+    {% endfor %}
+{% endif %}
     </section>
 
     <!-- Mask & flexbox options-->
@@ -152,5 +151,18 @@
         <!-- Mask & flexbox options-->
         <!-- Messages -->
     </footer>
+    {% block head_js %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- Bootstrap tooltips -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- MDB core JavaScript -->
+        <script src="{% static 'js/mdb.min.js' %}"></script>
+        <!-- Your custom scripts  -->
+        <script src="{% static 'js/custom.js' %}"></script>
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+    {% endblock head_js %}
 </body>
 </html>

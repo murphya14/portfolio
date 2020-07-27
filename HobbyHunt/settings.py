@@ -148,8 +148,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 MESSAGE_TAGS = {
-    messages.ERROR: 'alert-danger',
-    messages.SUCCESS: 'alert-success',
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'success',
 }
 
 MEDIA_URL = '/media/'
