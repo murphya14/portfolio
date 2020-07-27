@@ -5,7 +5,7 @@
 <!--Section: Content-->
 <section class="text-center">
    <!-- Section heading -->
-   <h3 class="font-weight-bold mb-5 indigo-text">Find out More</h3>
+   <h3 class="font-weight-bold mb-5 icon">Find out More</h3>
    <div class="row">
    <div class="col-lg-6">
       <img class="img-fluid product rounded" src="{{ MEDIA_URL }}{{ product_detail.image }}">
@@ -36,13 +36,13 @@
             </div>
          </form>
          <!--Review--> 
-         <p class="text-md-left purple-text font-weight-bold ">Rating:</p>
+         <p class="text-md-left blue-text font-weight-bold ">Rating:</p>
          <!--Put in rating here-->
          <!--Loops through reviews-->
-         <p class="text-md-left pink-text font-weight-bold ">{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i></p>
-         <button type="button" class="btn btn-outline-secondary waves-effect">  <a class="black-text font-weight-bold" href="{% url 'reviews:product_review' product_detail.id %}" role="button">Read Reviews</a></button>
-         <button type="button" class="btn btn-outline-secondary waves-effect"> <a class="black-text font-weight-bold"  href="{% url 'reviews:add_review' product_detail.id %}" role="button">Leave a Review</a></button>
-         <button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'all_hobby_products' %}">Back</a></button>      
+         <p class="text-md-left yellow-text font-weight-bold ">{{ product_detail.average_rating | floatformat }} <i class="fa fa-star star-color" aria-hidden="true"></i></p>
+         <button type="button" class="btn btn-outline-info waves-effect">  <a class="black-text font-weight-bold" href="{% url 'reviews:product_review' product_detail.id %}" role="button">Read Reviews</a></button>
+         <button type="button" class="btn btn-outline-info waves-effect"> <a class="black-text font-weight-bold"  href="{% url 'reviews:add_review' product_detail.id %}" role="button">Leave a Review</a></button>
+         <button type="button" class="text-center btn btn-outline-warning waves-effect"><a class="black-text font-weight-bold" href="{% url 'all_hobby_products' %}">Back</a></button>      
          </div>
          </div>
       </div>

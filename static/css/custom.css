@@ -16,6 +16,7 @@
 }
 
 
+
 body { padding-top: 0px;
     display: flex;
     flex-direction: column;
@@ -27,15 +28,16 @@ body { padding-top: 0px;
 
 .carousel-image {height: 400px;}
 
+.icon {color: #fb3 !important}
+
+.hh-button {background-color: #1d9ce5 !important}
+
 
 @media only screen and (max-width: 600px) {
     body { padding-top: 0px;}
    .mobile {margin-left: 5px!important;
     margin-right: 0!important;}
 }
-
-
-
 
 
 .feature {color: #1d9ce5;}

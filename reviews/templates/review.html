@@ -17,7 +17,7 @@
 <!-- Review area, with product details, add to cart option, reviews and leave a review option -->
 <div class="row review-info-area light-text">
    <div class="col-xs-12 col-sm-6 col-md-6">
-      <span class="sort-inline review-inner-header indigo-text">Description</span>
+      <span class="sort-inline review-inner-header blue-text">Description</span>
       <hr class="hr-dark-grey" />
       <p class="description">{{ product.description }}</p>
       <hr class="hr-dark-grey" />
@@ -37,14 +37,14 @@
     </div>
       <div class="col-md-8 mb-4">
          <!-- If user is logged in they can leave a review -->
-         <button type="button" class="btn btn-outline-secondary waves-effect"> <a class="black-text font-weight-bold"  href="{% url 'reviews:add_review' product.id %}"  role="button">Leave a Review</a></button>
+         <button type="button" class="btn btn-outline-info waves-effect"> <a class="black-text font-weight-bold"  href="{% url 'reviews:add_review' product.id %}"  role="button">Leave a Review</a></button>
          {% endif %}
       </div>
    </div>
    
    <!-- Displays the most recent 10 reviews -->
    <div class="col-xs-12 col-sm-6 col-md-6">
-      <span class="sort-inline review-inner-header indigo-text">Reviews (Most recent 5)</span>
+      <span class="sort-inline review-inner-header blue-text">Reviews (Most recent 5)</span>
       <hr class="hr-dark-grey" />
       <!-- Loops through each review in reviews -->
       {% for review in reviews %}
@@ -56,6 +56,6 @@
       {% endfor %}
    </div>
 </div>
-<button type="button" class="text-center btn btn-outline-info waves-effect"><a href="{% url 'details' product.pk %}">Back</a></button>     
+<button type="button" class="text-center btn btn-outline-warning waves-effect"><a class="black-text font-weight-bold" href="{% url 'all_hobby_products' %}">Back</a></button>      
 </div>
 {% endblock %}
