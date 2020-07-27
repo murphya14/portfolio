@@ -13,7 +13,7 @@ class MakePaymentForm(forms.Form):
     YEAR_CHOICES = [(i, i) for i in range(CURRENT_YEAR, 2036)]
 
     credit_card_number = forms.CharField(label='Credit card number',
-            required=False)
+            required=False, max_length=16)
     cvv = forms.CharField(label='Security code (CVV)', required=False)
     expiry_month = forms.ChoiceField(label='Month',
             choices=MONTH_CHOICES, required=False)
