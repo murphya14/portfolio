@@ -30,7 +30,7 @@ def checkout(request):
                 total += quantity * product.price
                 order_line_item = OrderLineItem(
                     order=order,
-                    product=hobby_product,
+                    product=product,
                     quantity=quantity
                 )
                 order_line_item.save()
@@ -46,9 +46,9 @@ def checkout(request):
                 messages.error(request, "Your card was declined!")
             
             if customer.paid:
-                messages.error(request, "You have successfully paid")
+                messages.success(request, "You have successfully paid")
                 request.session['cart'] = {}
-                return redirect(reverse('hobby_product'))
+                return redirect(reverse('home'))
             else:
                 messages.error(request, "Unable to take payment")
         else:
