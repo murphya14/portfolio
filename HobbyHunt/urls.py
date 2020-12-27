@@ -20,15 +20,15 @@ from django.views.generic import RedirectView
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from accounts import urls as accounts_urls
-from about.views import about
 from accounts.views import index
 from accounts.views import home
 from hobby_product import urls as urls_hobby_product
 from cart import urls as urls_cart
 from home import urls as urls_home
-from about import urls as urls_about
 from search import urls as urls_search
+from about import urls as urls_about
 from checkout import urls as urls_checkout
+from summer_course import urls as urls_summer
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -41,9 +41,10 @@ urlpatterns = [
     url(r'^accounts/', include(accounts_urls)),
     url(r'^hobby_product/', include(urls_hobby_product)),
     url(r'^cart/', include(urls_cart)),
-    url(r'^about/', include(urls_about)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
+    url(r'^about/', include(urls_about)),
+    url(r'^summer/', include(urls_summer)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     url(r'^home/', include(urls_home)),
 ]

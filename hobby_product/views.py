@@ -37,9 +37,5 @@ def details(request, hobby_product_id):
 
         return render(request, 'details.html', {'product_detail': product_detail})
 
-def about(request):
-    return render(
-        request,
-        "Hobby_Hunt-/hobby_products/templates/about.html"
-    )
+
 

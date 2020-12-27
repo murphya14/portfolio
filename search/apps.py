@@ -4,4 +4,4 @@ class SearchConfig(AppConfig):
     name = 'search'
     name = 'rent'
     name = 'group'
-    name = 'summer'
+    name = 'summer_course'
