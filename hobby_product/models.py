@@ -6,23 +6,20 @@ from django.db.models import Avg
 
 class hobby_product(models.Model):
 
-    ARTS_AND_CRAFT = 'art'
-    MUSIC = 'music'
-    GAMES = 'games'
-    COLLECTORS = 'collectors'
-    ACADEMIC = 'academic'
-    NONE = 'NUL'
-    SPORT = 'sport'
-    OTHER = 'other'
+    ARTS_AND_CRAFT = 'rent'
+    MUSIC = 'course'
+    GAMES = 'weekend'
+    COLLECTORS = 'groups'
+    ACADEMIC = 'private'
+    NONE = 'school'
     CATEGORIES = (
         (NONE, 'Select a category'),
-        (ARTS_AND_CRAFT, 'Art'),
-        (MUSIC, 'Music'),
-        (GAMES, 'Games'),
-        (COLLECTORS, 'Collectors'),
-        (SPORT, 'Sport'),
-        (ACADEMIC, 'Academic & Educational'),
-        (OTHER, 'other')
+        (ARTS_AND_CRAFT, 'rent'),
+        (MUSIC, 'course'),
+        (GAMES, 'weekend'),
+        (COLLECTORS, 'groups'),
+        (ACADEMIC, 'private'),
+        (NONE, 'school')
     )
 
     name = models.CharField(max_length=254, default='')

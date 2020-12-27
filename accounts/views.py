@@ -13,6 +13,12 @@ def index(request):
 
     return render(request, 'index.html')
 
+def home(request):
+    """Return the index.html file"""
+
+    return render(request, 'home.html')
+
+
 
 @login_required
 def logout(request):

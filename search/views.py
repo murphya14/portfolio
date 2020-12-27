@@ -8,7 +8,10 @@ from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
-
+def rent(request):
+    """ Return rent page """
+    return render(request, 'rent.html')
+    
 def do_search(request):
     """Use keyword to get products"""
 
@@ -60,3 +63,4 @@ def category(request, category):
 
     return render(request, 'category.html',
                   {'products': product_objects, 'category': category})
+                  

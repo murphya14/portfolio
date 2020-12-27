@@ -21,6 +21,7 @@ from django.views.static import serve
 from .settings import MEDIA_ROOT
 from accounts import urls as accounts_urls
 from accounts.views import index
+from accounts.views import home
 from hobby_product import urls as urls_hobby_product
 from cart import urls as urls_cart
 from home import urls as urls_home
@@ -32,7 +33,7 @@ from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', RedirectView.as_view(url='accounts/login/')),
+    url(r'^$', RedirectView.as_view(url='home/')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^$', index, name="index"),
     url(r'^accounts/', include(accounts_urls)),
