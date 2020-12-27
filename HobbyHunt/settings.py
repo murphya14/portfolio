@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'search',
     'home',
     'reviews',
+    'about',
     
 ]
 

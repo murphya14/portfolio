@@ -36,3 +36,11 @@ def details(request, hobby_product_id):
         product_detail = get_object_or_404(hobby_product, pk=hobby_product_id)
 
         return render(request, 'details.html', {'product_detail': product_detail})
+
+def about(request):
+        """ Return details page """
+
+
+        return render(request, 'about.html')
+
+
