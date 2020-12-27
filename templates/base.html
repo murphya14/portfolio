@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
-    <title>Hobby Hunt</title>
+    <title>Celtic Surf - Spanish Point</title>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
@@ -38,8 +38,8 @@
     <nav class="custom-nav navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
 
         <div class="container">
-        <div class="nav-hobby"> 
-         <a class="navbar-brand text-warning nav-hobby hoverable" href="{% url 'home' %}"><strong>Celtic Surf Spanish Point</strong></a>
+        <div class="nav-hobby "> 
+         <h2><a class="navbar-brand text-warning nav-hobby hover-shadow font-weight-bold fw-bolder title" href="{% url 'home' %}">Celtic Surf - Spanish Point</a></h2>
         </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
                 aria-controls="navbarSupportedContent-7" aria-expanded="false"   aria-label="Toggle navigation">
@@ -49,20 +49,21 @@
                 <ul class="navbar-nav mr-auto">
                                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Surf Spanish Point
+                        Surf Lessons
                         </a>
                         <div class="dropdown-menu category" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item category" href="{% url 'category' 'rent' %}">Rent a board</a>
-                            <a class="dropdown-item category" href="{% url 'category' 'course' %}">Summer courses</a>
-                            <a class="dropdown-item category" href="{% url 'category' 'weekend' %}">Weekend course</a>
-                            <a class="dropdown-item category" href="{% url 'category' 'groups' %}">Groups</a>
-                            <a class="dropdown-item category" href="{% url 'category' 'private' %}">Private Lessons</a>
-                            <a class="dropdown-item category" href="{% url 'category' 'school' %}">Advanced Lessons</a>
+                            <a class="dropdown-item category" href="{% url 'rent' %}">Rent a board</a>
+                            <a class="dropdown-item category" href="">Summer courses</a>
+                            <a class="dropdown-item category" href="">Weekend course</a>
+                            <a class="dropdown-item category" href="">Groups</a>
+                            <a class="dropdown-item category" href="">Private/Advanced Lessons</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'all_hobby_products' %}">Book</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'all_hobby_products' %}">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Contact</a></li>
 
                    <!-- {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"> My Profile</a></li>
@@ -83,7 +84,11 @@
                 </ul>
                 <form class="form-inline" action="{% url 'search' %}" method="get">
                     <div class="md-form my-0">
-                        <input class="form-control search mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <p class="font-weight-bold text-warning">Follow us on:</p>
+                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-youtube"></i></a>
                     </div>
                 </form>
             </div>
@@ -132,22 +137,20 @@
     <!--Footer-->
     <footer class ="text-center">
         <div class="col-md-12 mb-4 text-center">
-            <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+            <hr class="hr-light my-4 wow fadeInDown text-warning" data-wow-delay="0.4s">
             <p class="font-weight-bold">Follow us on:</p>
             <!--Facebook-->
-            <a href="#" class="mx-1" role="button"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="mx-1" role="button"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="mx-1" role="button"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="mx-1" role="button"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="mx-1" role="button"><i class="fab fa-pinterest"></i></a>
-            <a href="#" class="mx-1" role="button"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-youtube"></i></a>
         </div>
         <!--Grid column-->
         <!--Grid row-->
         <!-- Content -->
         <!--Section: Content-->
         <section class="px-md-5 mx-md-5 py-5 text-center indigo-text">
-            <h3 class="blue-text">Made with <i class="fas fa-heart red-text mx-1"></i> by Ais Designs</h3>
+            <h3 class="black-text">Made with <i class="fas fa-heart red-text mx-1"></i> by Ais Designs</h3>
         </section>
         <!--Section: Content-->
         <!-- Mask & flexbox options-->

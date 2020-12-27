@@ -4,15 +4,18 @@
 <!--Section: Content-->
 <section>
    <!-- Section heading -->
-   <h4 class="font-weight-bold font-italic blue-text">Hunt for your Passion. Hunt for your Hobby.</h4>
+   <h4 class="font-weight-bold fw-bolder font-italic blue-text">Welcome to Celtic Surf! Taking bookings NOW on <h4 class="font-weight-bold font-italic green-text">085-333333 </h4> <h4 class="font-weight-bold font-italic blue-text">or <a href="">contact us (link)</a> </h4>
    <br>
+     <a class="btn hh-button font-weight-bold black-text my-4" href="javascript: document.body.scrollIntoView(false);" role="button">Need directions?<i class="fas fa-shoe-prints ml-2"></i></a>
      <!-- Logo -->
        <div class="image text-center">
+           
          <a class="text-left" href="{% url 'home' %}" target="_blank">
-          <img  class="img-fluid" width="150" height="100" src="{% static 'images/logo.png' %}" alt="Logo">
+          <img  class="img-fluid" width="150" height="100" src="" alt="">
          </a>
         </div>
 
+        
    <!-- Grid row -->
    <div class="row mobile">
       <!-- Grid column -->
@@ -21,14 +24,14 @@
          <div class="row mb-3">
             <!-- Grid column -->
             <div>
-               <i class="fas fa-2x fa-flag-checkered icon"></i>
+               <i class="fas fa-2x fas fa-award icon"></i>
             </div>
             <!-- Grid column -->
             <!-- Grid column -->
             <div>
-               <h2 class="font-weight-bold mb-3 feature"> Safety </h2>
+               <h2 class="font-weight-bold mb-3 feature"> The Team </h2>
                <p class="font-weight-bold">
-                  At Celtic Surf Spanish Point we value safety -  All our staff are qualified lifegaurds. 
+                  Our coaches are qualified lifegaurds and International Surf Association Certified Surf Coaches
                </p>
             </div>
             <!-- Grid column -->
@@ -38,13 +41,13 @@
          <div class="row mb-3">
             <!-- Grid column -->
             <div>
-               <i class="fas fa-2x fa-flask icon"></i>
+               <i class="fas fa-2x fas fa-tint icon"></i> 
             </div>
             <!-- Grid column -->
             <!-- Grid column -->
             <div>
-               <h2 class="font-weight-bold mb-3 feature">Experiment</h2>
-               <p class="font-weight-bold">Explore different hobbys and experiment with our wide range of products.</p>
+               <h2 class="font-weight-bold mb-3 feature">Check the tide</h2>
+               <p class="font-weight-bold">All lessons will be based on the tide. If you want to check it out, see <a href="https://www.surf-forecast.com/breaks/Spanish-Point/tides/latest" target="_blank">here</a></p>
             </div>
             <!-- Grid column -->
          </div>
@@ -56,15 +59,15 @@
          <div id="carouselExampleControls" class="carousel slide col-md-12" data-ride="carousel">
             <div class="carousel-inner">
                <div class="carousel-item active">
-                  <img class="d-block w-100 img-fluid carousel-image" src="{% static 'images/paint_set.jpg' %}"
+                  <img class="d-block w-100 img-fluid carousel-image" src="{% static 'images/surf4.jpg' %}"
                      alt="First slide">     
                </div>
                <div class="carousel-item">
-                  <img class="d-block w-100 img-fluid carousel-image" src="{% static 'images/hiking.jpg' %}"
+                  <img class="d-block w-100 img-fluid carousel-image" src="{% static 'images/surf3.jpg' %}"
                      alt="Second slide">
                </div>
                <div class="carousel-item">
-                  <img class="d-block w-100 img-fluid carousel-image" src="{% static 'images/PS4.jpg' %}"
+                  <img class="d-block w-100 img-fluid carousel-image" src="{% static 'images/surf5.jpg' %}"
                      alt="Third slide">
                </div>
             </div>
@@ -77,7 +80,7 @@
             <span class="sr-only">Next</span>
             </a>
             <br>
-            <a class="btn hh-button font-weight-bold black-text my-4" href="{% url 'all_hobby_products' %}" role="button">Start exploring<i class="fas fa-shoe-prints ml-2"></i></a>
+          
          </div>
       </div>
       <!-- Grid column -->
@@ -91,8 +94,8 @@
             <!-- Grid column -->
             <!-- Grid column -->
             <div>
-               <h2 class="font-weight-bold mb-3 feature">Share</h2>
-               <p class="font-weight-bold">Share your experience by leaving a review. Inspire, critique and contribute.</p>
+               <h2 class="font-weight-bold mb-3 feature">West of Ireland</h2>
+               <p class="font-weight-bold">Here at Celtic Surf, we aim to not only teach our budding surfers to ride the waves but also to mind the waves.</p>
             </div>
             <!-- Grid column -->
          </div>
@@ -105,13 +108,13 @@
          <div class="row">
             <!-- Grid column -->
             <div>
-               <i class="fas fa-2x fa-magic icon"></i>
+               <i class="fas fa-2x fas fa-child icon"></i>
             </div>
             <!-- Grid column -->
             <!-- Grid column -->
             <div>
-               <h2 class="font-weight-bold mb-3 feature">Inspire</h2>
-               <p class="mb-0 font-weight-bold">At Hobby Hunt we aim to motivate our customers to follow and find their passion. </p>
+               <h2 class="font-weight-bold mb-3 feature">Enjoy</h2>
+               <p class="mb-0 font-weight-bold">Celtic surf is about having fun, no matter the weather! Whether a family adventure, gang of friends or joining a group course </p>
             </div>
             <!-- Grid column -->
          </div>
@@ -120,8 +123,54 @@
       <!-- Grid column -->
    </div>
    <!-- Grid row -->
-   <p class="mt-3 mb-4 deep-purple-text quote">"The two most important days in your life are the day you are born and the day you find out why."</p>
-   <p class="font-italic font-weight-normal">- Mark Twain</p>
+<div class="container-fluid mt-3 mb-5">
+
+  <!-- Section: Block Content -->
+  <section class="mb-4">
+
+    <style>
+      .map-container {
+        overflow: hidden;
+        position: relative;
+        height: 0;
+      }
+
+      .map-container iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+    </style>
+
+    <div class="card">
+
+      <div class="row">
+        <div class="col-md-6">
+
+          <!-- Google Maps -->
+          <div id="map-within-card-2" class="map-container rounded-left" style="height: 400px">
+            <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=sPANISH%20POINT,%20clARE%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm">Plan A Journey</a></div>
+          </div>
+          <!-- Google Maps -->
+
+        </div>
+
+        <div class="col-10 col-md-4 mx-auto align-self-center py-4">
+          <h5 class="font-weight-normal mb-4">Celtic Surf</h5>
+          <p class="text-muted font-weight-light">Spanish Point<br>Clare, Ireland</p>
+          <p class="text-muted font-weight-light mb-0">Phone: 085 333333<br>Email: hello@thetheme.io</p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Section: Block Content -->
+
+</div>
 </section>
 <!--Section: Content-->
 

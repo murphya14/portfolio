@@ -19,3 +19,8 @@ def server_error(request):
     """ Return 500 internal server error """
 
     return render(request, '500.html')
+
+def about(request):
+    return render(
+        request, "about.html"
+    )

@@ -15,7 +15,9 @@
     white-space: nowrap;
 }
 
-
+.title {
+    font-weight: 900;
+}
 
 body { padding-top: 0px;
     display: flex;

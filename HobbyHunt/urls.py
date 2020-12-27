@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from accounts.views import index, logout, login, registration, user_profile, about
+from accounts.views import index, logout, login, registration, user_profile
 from django.views.generic import RedirectView
 from django.views.static import serve
 from .settings import MEDIA_ROOT
@@ -23,7 +23,6 @@ from accounts import urls as accounts_urls
 from about.views import about
 from accounts.views import index
 from accounts.views import home
-from accounts.views import about
 from hobby_product import urls as urls_hobby_product
 from cart import urls as urls_cart
 from home import urls as urls_home
