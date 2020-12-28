@@ -1,21 +1,41 @@
 {% extends 'base.html' %}
 {% load staticfiles %} 
 {% block content %}
-<!--Section: Content-->
-<section>
-   <!-- Section heading -->
-   <h4 class="font-weight-bold fw-bolder font-italic blue-text">Welcome to Celtic Surf! Taking bookings NOW on <h4 class="font-weight-bold font-italic green-text">085-333333 </h4> <h4 class="font-weight-bold font-italic blue-text">or <a href="">contact us (link)</a> </h4>
-   <br>
-     <a class="btn hh-button font-weight-bold black-text my-4" href="javascript: document.body.scrollIntoView(false);" role="button">Need directions?<i class="fas fa-shoe-prints ml-2"></i></a>
-     <!-- Logo -->
-       <div class="image text-center">
-           
-         <a class="text-left" href="{% url 'home' %}" target="_blank">
-          <img  class="img-fluid" width="150" height="100" src="" alt="">
-         </a>
-        </div>
 
-        
+
+        <!--Update bar -->
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center white-text grey p-5 z-depth-1"
+      style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-xl-8 col-md-10">
+
+            <h3 class="font-weight-bold">Notice Board</h3>
+      
+            <p>Taking bookings for summer courses now. Get your surf on!</p>
+      
+            <a href="#" class="btn btn-outline-white btn-md waves-effect font-weight-bold" role="button"> Contact us or call 083-999999</a>
+             <a class="btn btn-outline-white btn-md waves-effect font-weight-bold " href="javascript: document.body.scrollIntoView(false);" role="button">Need directions?<i class="fas fa-shoe-prints ml-2"></i></a>
+
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+
    <!-- Grid row -->
    <div class="row mobile">
       <!-- Grid column -->
@@ -143,6 +163,31 @@
         position: absolute;
       }
     </style>
+
+
+
+
+
+     
+     <!-- Logo -->
+       <div class="image text-center">
+           
+         <a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="" alt="">
+         </a>
+        </div>
+
+    <div class="container my-5 py-5">
+
+    
+
+
+
+
+
+
+
+
 
     <div class="card">
 

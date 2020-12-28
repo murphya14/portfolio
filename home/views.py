@@ -8,6 +8,21 @@ def home(request):
     #return redirect(reverse('home'))
     return render(request, 'home.html')
 
+def contact(request):
+    """ Return home page """
+    #return redirect(reverse('home'))
+    return render(request, 'contact.html')
+
+def summer_course(request):
+    """ Return home page """
+    #return redirect(reverse('home'))
+    return render(request, 'summer_course.html')
+
+def faq(request):
+    """ Return home page """
+    #return redirect(reverse('home'))
+    return render(request, 'faq.html')
+
 
 def not_found(request):
     """ Return 404 page not found """
@@ -21,6 +36,8 @@ def server_error(request):
     return render(request, '500.html')
 
 def about(request):
-    return render(
-        request, "about.html"
-    )
+    """ Return about.html """
+
+    return render(request, 'about.html')
+
+
