@@ -8,6 +8,22 @@ def home(request):
     #return redirect(reverse('home'))
     return render(request, 'home.html')
 
+
+def groups(request):
+    """ Return home page """
+    #return redirect(reverse('home'))
+    return render(request, 'groups.html')
+
+def private_lessons(request):
+    """ Return home page """
+    #return redirect(reverse('home'))
+    return render(request, 'private_lessons.html')
+
+def weekend_course(request):
+    """ Return home page """
+    #return redirect(reverse('home'))
+    return render(request, 'weekend_course.html')
+
 def contact(request):
     """ Return home page """
     #return redirect(reverse('home'))

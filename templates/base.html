@@ -54,9 +54,9 @@
                         <div class="dropdown-menu category" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item category" href="{% url 'rent' %}">Rent a board</a>
                             <a class="dropdown-item category" href="{% url 'summer_course' %}">Summer courses</a>
-                            <a class="dropdown-item category" href="">Weekend course</a>
-                            <a class="dropdown-item category" href="">Groups</a>
-                            <a class="dropdown-item category" href="">Private/Advanced Lessons</a>
+                            <a class="dropdown-item category" href="{% url 'weekend_course' %}">Weekend course</a>
+                            <a class="dropdown-item category" href="{% url 'groups' %}">Groups</a>
+                            <a class="dropdown-item category" href="{% url 'private_lessons' %}">Private/Advanced Lessons</a>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
