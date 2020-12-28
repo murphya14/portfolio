@@ -12,19 +12,7 @@ def rent(request):
     """ Return rent page """
     return render(request, 'rent.html')
 
-def groups(request):
-    """ Return rent page """
-    return render(request, 'groups.html')
 
-def private_lessons(request):
-    return render(request, 'summer_course.html')
-
-def summer_course(request):
-     return redirect(("summer_course.html"))
-
-def weekend(request):
-    return render(request, 'weekend_course.html')
-    
     
 def do_search(request):
     """Use keyword to get products"""

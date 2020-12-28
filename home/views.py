@@ -8,6 +8,11 @@ def home(request):
     #return redirect(reverse('home'))
     return render(request, 'home.html')
 
+# Create your views here.
+def rent(request):
+    """ Return rent page """
+    return render(request, 'rent.html')
+
 
 def groups(request):
     """ Return home page """
