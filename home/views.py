@@ -13,6 +13,11 @@ def rent(request):
     """ Return rent page """
     return render(request, 'rent.html')
 
+# Create your views here.
+def gallery(request):
+    """ Return rent page """
+    return render(request, 'gallery.html')
+
 
 def groups(request):
     """ Return home page """

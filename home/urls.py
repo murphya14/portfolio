@@ -1,5 +1,5 @@
 from django.conf.urls import url, include                                                                                                                                                                                                                                     
-from .views import not_found, server_error, home, about, contact, faq, summer_course, weekend_course, groups, private_lessons, rent
+from .views import not_found, server_error, home, about, contact, faq, summer_course, weekend_course, groups, private_lessons, rent, gallery
 
 urlpatterns = [
     url(r'^$', home, name='home'),
@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^groups/', groups, name='groups'),
     url(r'^private_lessons/', private_lessons, name='private_lessons'),
     url(r'^rent/', rent, name='rent'),
+    url(r'^gallery/', gallery, name='gallery'),
     url('not_found/', not_found, name='not_found'),
     url('server_error/', server_error, name='server_error'),
     
