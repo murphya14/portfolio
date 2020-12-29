@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from hobby_product.models import hobby_product
+from django.core.mail import send_mail
 
 
 
@@ -37,6 +38,9 @@ def weekend_course(request):
 def contact(request):
     """ Return home page """
     #return redirect(reverse('home'))
+    if request.method == "POST":
+        message = request.POST['message']
+        send_mail('Contact Form', message, settings.EMAIL_HOST_USER, ['aislingmurphy14@hotmail.com'], fail_silently=False)
     return render(request, 'contact.html')
 
 def summer_course(request):

@@ -35,11 +35,11 @@
     <!-- Fixed masthead -->
     <!--Navbar-->
    <header>
-    <nav class="custom-nav navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
+    <nav class="custom-nav blue-gradient navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
 
         <div class="container">
         <div class="nav-hobby "> 
-         <h2><a class="animated fadeInLeftBig navbar-brand text-warning nav-hobby hover-shadow font-weight-bold fw-bolder title" href="{% url 'home' %}">Celtic Surf - Spanish Point</a></h2>
+         <h2><a class="animated fadeInLeftBig  font-weight-bold cyan-lighter-hover mb-3 navbar-brand orange-text nav-hobby hover-shadow font-weight-bold fw-bolder title" href="{% url 'home' %}">Celtic Surf - Spanish Point</a></h2>
         </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
                 aria-controls="navbarSupportedContent-7" aria-expanded="false"   aria-label="Toggle navigation">
@@ -47,23 +47,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item dropdown">
+                    <li class="nav-item"><a class="nav-link white-darker-hover" href="{% url 'home' %}">Home</a></li>
+                                        <li class="white-darker-hover nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Surf Lessons
                         </a>
                         <div class="dropdown-menu category" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item category" href="{% url 'rent' %}">Rent a board</a>
-                            <a class="dropdown-item category" href="{% url 'summer_course' %}">Summer courses</a>
-                            <a class="dropdown-item category" href="{% url 'weekend_course' %}">Weekend course</a>
-                            <a class="dropdown-item category" href="{% url 'groups' %}">Groups</a>
-                            <a class="dropdown-item category" href="{% url 'private_lessons' %}">Private/Advanced Lessons</a>
+                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'rent' %}">Rent a board</a>
+                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'summer_course' %}">Summer courses</a>
+                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'weekend_course' %}">Weekend course</a>
+                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'groups' %}">Groups</a>
+                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'private_lessons' %}">Private/Advanced Lessons</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Book</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="nav-item white-darker-hover"><a class="nav-link " href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'contact' %}">Book</a></li>
+                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
+                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
+                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
 
                    <!-- {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"> My Profile</a></li>

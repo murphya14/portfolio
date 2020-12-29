@@ -2,11 +2,16 @@
 {% load staticfiles %} 
 {% block content %}
 
+{% csrf_token %} 
+ <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+
+
 <div class="container z-depth-1 my-5 px-0">
 
   <!--Section: Content-->
   <section class="my-md-5" 
-    style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/People/12-col/img%20(97).jpg'); background-size: cover; background-position: center center;">
+    style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg'); background-size: cover; background-position: center center;">
 
     <div class="rgba-black-strong rounded p-5">
 
@@ -23,21 +28,21 @@
 
                 <!-- Name -->
                 <div class="md-form md-outline mt-0">
-                  <input type="text" id="name" class="form-control">
+                  <input type="text" id="name"  name="name" class="form-control">
                   <label for="name">Your Name</label>
                 </div>
                 <!-- Email -->
                 <div class="md-form md-outline">
-                  <input type="text" id="email" class="form-control">
+                  <input type="text" id="email" name="email" class="form-control">
                   <label for="email">Your Email Address</label>
                 </div>
                 <!-- Message -->
                 <div class="md-form md-outline">
-                  <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
+                  <textarea id="message" name="message" class="md-textarea form-control" rows="3"></textarea>
                   <label for="message">Your Message</label>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
+                <button type="submit" onclick="document.getElementById('contact-form').submit();"	input type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
 
               </div>
             </div>
@@ -59,9 +64,8 @@
           </div>
         </div>
 
-      </form>
-
-
+      
+</form>
 
   </section>
   <!--Section: Content-->

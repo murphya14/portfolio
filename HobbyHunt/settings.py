@@ -163,9 +163,9 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get("EMAIL_ADDRESS")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST_USER = "aislingmurphy14@hotmail.com"
+EMAIL_HOST_PASSWORD = "Quality@1"
 EMAIL_PORT = 587
 
 AUTHENTICATION_BACKENDS = [
