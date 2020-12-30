@@ -1,8 +1,54 @@
 from django.shortcuts import render, redirect, reverse
 from hobby_product.models import hobby_product
 from django.core.mail import send_mail
+from django.http import HttpResponse 
+from home.forms import ContactForm
+from django.template.loader import get_template
+from django.core.mail import EmailMessage
 
 
+
+
+# add to your views
+def contact(request):
+    form_class = ContactForm
+
+    # new logic!
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
+
+        if form.is_valid():
+            contact_name = request.POST.get(
+                'contact_name'
+            , '')
+            contact_email = request.POST.get(
+                'contact_email'
+            , '')
+            form_content = request.POST.get('content', '')
+
+            # Email the profile with the
+            # contact information
+            template = get_template('contact_template.txt')
+            context = {
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'form_content': form_content,
+            }
+            content = template.render(context)
+
+            email = EmailMessage(
+                "New contact form submission",
+                content,
+                "Your website" +'',
+                ['celticsurfschool@gmail.com'],
+                headers = {'Reply-To': contact_email }
+            )
+            email.send()
+            return redirect('contact')
+
+    return render(request, 'contact.html', {
+        'form': form_class,
+    })
 
 def home(request):
     """ Return home page """
@@ -35,13 +81,7 @@ def weekend_course(request):
     #return redirect(reverse('home'))
     return render(request, 'weekend_course.html')
 
-def contact(request):
-    """ Return home page """
-    #return redirect(reverse('home'))
-    if request.method == "POST":
-        message = request.POST['message']
-        send_mail('Contact Form', message, settings.EMAIL_HOST_USER, ['aislingmurphy14@hotmail.com'], fail_silently=False)
-    return render(request, 'contact.html')
+
 
 def summer_course(request):
     """ Return home page """

@@ -160,13 +160,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp-mail.outlook.com'
-EMAIL_HOST_USER = "aislingmurphy14@hotmail.com"
-EMAIL_HOST_PASSWORD = "Quality@1"
-EMAIL_PORT = 587
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',

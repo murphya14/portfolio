@@ -2,9 +2,9 @@
 {% load staticfiles %} 
 {% block content %}
 
-{% csrf_token %} 
- <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
 
 
 <div class="container z-depth-1 my-5 px-0">
@@ -28,21 +28,21 @@
 
                 <!-- Name -->
                 <div class="md-form md-outline mt-0">
-                  <input type="text" id="name"  name="name" class="form-control">
+                  <input type="text" id="name" class="form-control">
                   <label for="name">Your Name</label>
                 </div>
                 <!-- Email -->
                 <div class="md-form md-outline">
-                  <input type="text" id="email" name="email" class="form-control">
+                  <input type="text" id="email" class="form-control">
                   <label for="email">Your Email Address</label>
                 </div>
                 <!-- Message -->
                 <div class="md-form md-outline">
-                  <textarea id="message" name="message" class="md-textarea form-control" rows="3"></textarea>
+                  <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
                   <label for="message">Your Message</label>
                 </div>
 
-                <button type="submit" onclick="document.getElementById('contact-form').submit();"	input type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
+                <button type="submit" 	input type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
 
               </div>
             </div>
