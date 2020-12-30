@@ -4,7 +4,7 @@
 
 <form role="form" action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+  
 
 
 <div class="container z-depth-1 my-5 px-0">
@@ -15,6 +15,7 @@
 
     <div class="rgba-black-strong rounded p-5">
 
+   
       <!-- Section heading -->
       <h3 class="text-center font-weight-bold text-white mt-3 mb-5">Contact Us</h3>
 
@@ -24,24 +25,14 @@
           <div class="col-md-6 mb-4">
 
             <div class="card">
+
+       
+
               <div class="card-body px-4">
 
-                <!-- Name -->
-                <div class="md-form md-outline mt-0">
-                  <input type="text" id="name" class="form-control">
-                  <label for="name">Your Name</label>
-                </div>
-                <!-- Email -->
-                <div class="md-form md-outline">
-                  <input type="text" id="email" class="form-control">
-                  <label for="email">Your Email Address</label>
-                </div>
-                <!-- Message -->
-                <div class="md-form md-outline">
-                  <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
-                  <label for="message">Your Message</label>
-                </div>
+                {{ form.as_p }}
 
+               
                 <button type="submit" 	input type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
 
               </div>
