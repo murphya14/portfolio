@@ -21,20 +21,19 @@
 
       <form class="mx-md-5" action="">
 
-        <div class="row">
-          <div class="col-md-6 mb-4">
+        <div class="row ">
+          <div class="col-md-6 mb-4 ">
 
-            <div class="card">
+            <div class="card btn-outline-light">
 
        
 
-              <div class="card-body px-4">
-
+              <div class="card-body form-outline mb-4">
+                {% csrf_token %}
                 {{ form.as_p }}
 
-               
-                <button type="submit" href="{% url 'home' %}" input type="submit" class="mt-md-4 mb-4 font-weight-bold btn btn-primary text-center btn-md btn-block ml-0 mb-0">Submit</button>
-
+                    
+              <button type="submit" input type="submit" class="btn btn-outline-info" data-mdb-ripple-color="dark">Submit</button>
               </div>
             </div>
 
