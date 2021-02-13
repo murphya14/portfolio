@@ -2,7 +2,7 @@
 {% load staticfiles %} 
 {% block content %}
 
-<form role="form" action="" method="post">
+<form role="form" action="https://formspree.io/f/meqpwoao" method="POST">
     {% csrf_token %}
   
 
@@ -33,7 +33,7 @@
                 {{ form.as_p }}
 
                
-                <button type="submit" 	input type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
+                <button type="submit" href="{% url 'home' %}" input type="submit" class="mt-md-4 mb-4 font-weight-bold btn btn-primary text-center btn-md btn-block ml-0 mb-0">Submit</button>
 
               </div>
             </div>
