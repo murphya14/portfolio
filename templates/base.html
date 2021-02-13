@@ -35,18 +35,23 @@
     <!-- Fixed masthead -->
     <!--Navbar-->
    <header>
-    <nav class="custom-nav blue-gradient navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
+    <nav class=" font_custom custom-nav blue-gradient navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
 
         <div class="container">
         <div class="nav-hobby "> 
-         <h2><a class="animated fadeInLeftBig  font-weight-bold cyan-lighter-hover mb-3 navbar-brand orange-text nav-hobby hover-shadow font-weight-bold fw-bolder title" href="{% url 'home' %}">Celtic Surf - Spanish Point</a></h2>
+                                    <!-- Logo -->
+        <h2><a class="text-left" href="{% url 'home' %}" target="_blank">
+          <img  class="img-fluid" width="150" height="100" src="" alt="">
+         </a>
+         <a class=" font_custom animated pulse font-weight-bold cyan-lighter-hover mb-3 navbar-brand white-text nav-hobby hover-shadow font-weight-bold fw-bolder title" href="{% url 'home' %}">Celtic Surf <br> Spanish Point, Co.Clare</a></h2>
         </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+            <button class="font_custom navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
                 aria-controls="navbarSupportedContent-7" aria-expanded="false"   aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto font_custom">
+      
                     <li class="nav-item"><a class="nav-link white-darker-hover" href="{% url 'home' %}">Home</a></li>
                                         <li class="white-darker-hover nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,7 +90,7 @@
                 </ul>
                 <form class="form-inline" action="{% url 'search' %}" method="get">
                     <div class="md-form my-0">
-                    <p class="font-weight-bold text-warning">Follow us on:</p>
+                    <p class="font-weight-bold text-warning font_custom">Follow us on:</p>
                     <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-instagram"></i></a>
@@ -97,11 +102,11 @@
     </nav>    
     </header>     
     <!-- Messages -->
-    <section class="container">
+    <section class="container font_custom">
 {% if messages %}
     {% regroup messages|dictsort:"tags" by tags as message_list  %}
     {% for tags in message_list %}
-        <div class="alert alert-{{ tags.grouper }}">
+        <div class="alert font_custom alert-{{ tags.grouper }}">
             <div class="container">
                 <ul>
                     {% for message in tags.list %}
@@ -110,7 +115,7 @@
                         </li>
                     {% endfor %}
                 </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <button type="button" class="close font_custom" data-dismiss="alert" aria-hidden="true">&times;</button>
             </div>
         </div>
     {% endfor %}
@@ -136,10 +141,10 @@
     </main>
 
     <!--Footer-->
-    <footer class ="text-center">
+    <footer class ="text-center font_custom">
         <div class="col-md-12 mb-4 text-center">
             <hr class="hr-light my-4 wow fadeInDown text-warning" data-wow-delay="0.4s">
-            <p class="font-weight-bold">Follow us on:</p>
+            <p class="font-weight-bold font_custom">Follow us on:</p>
             <!--Facebook-->
             <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-twitter"></i></a>
@@ -150,8 +155,8 @@
         <!--Grid row-->
         <!-- Content -->
         <!--Section: Content-->
-        <section class="px-md-5 mx-md-5 py-5 text-center indigo-text">
-            <h3 class="black-text">Made with <i class="fas fa-heart red-text mx-1"></i> by Ais Designs</h3>
+        <section class="px-md-5 mx-md-5 py-5 text-center indigo-text font_custom">
+            <h3 class="black-text font_custom">Made with <i class="fas fa-heart red-text mx-1"></i> by Ais Designs</h3>
         </section>
         <!--Section: Content-->
         <!-- Mask & flexbox options-->
@@ -165,5 +170,10 @@
         <!-- Your custom scripts  -->
         <script src="{% static 'js/custom.js' %}"></script>
     {% endblock head_js %}
+      <style>
+        .font_custom {
+            font-family: cursive !important;
+        }
+    </style>
 </body>
 </html>

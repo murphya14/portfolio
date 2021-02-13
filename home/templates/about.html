@@ -4,11 +4,11 @@
 
 
 
-  <div class="container my-5 py-5 z-depth-1">
+  <div class="container my-5 py-5 z-depth-1 font_custom">
 
 
     <!--Section: Content-->
-    <section class="px-md-5 mx-md-5 text-center dark-grey-text">
+    <section class="px-md-5 mx-md-5 text-center dark-grey-text font_custom">
 
       <!--Grid row-->
       <div class="row">
@@ -16,20 +16,20 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4 mb-md-0">
 
-          <h3 class="font-weight-bold">About Celtic Surf</h3>
+          <h3 class="font-weight-bold font_custom">About Celtic Surf</h3>
 
-          <p class="text-muted">
+          <p class="text-muted font_custom">
               - Who are you - experience, passion for Clare, surfing etc, kid friendly (push this and all the differnet camps you have done)  <br>
               - Why are you doing this? working with communities, work with a great team, promote wild atlantic way, promote the great outdoors, love of nature etc
               - What do you offer - groups/ private lessons etc
               - Finally, business philosopy - Have a good time and show a bit of appreciation for the sea?
           </p>
 
-          <a class="btn btn-purple btn-md ml-0" href="{% url 'contact' %}" role="button">Surf and smile with us<i class="far fa-smile-beam ml-2"></i></a><i class=""></i>
+          <a class="btn btn-purple font_custom" href="{% url 'contact' %}" role="button">Surf and smile with us<i class="far fa-smile-beam ml-2"></i></a><i class=""></i>
 
           <hr class="my-5">
 
-          <p class="font-weight-bold">Follow us on:</p>
+          <p class="font-weight-bold font_custom">Follow us on:</p>
 
           <!--Facebook-->
             <a href="#" class="mx-1 text-purple" role="button"><i class="fab fa-facebook-f"></i></a>
@@ -65,5 +65,11 @@
             </div>
         </div>
     </main>
+
+      <style>
+        .font_custom {
+            font-family: cursive !important;
+        }
+    </style>
 
  {% endblock %}
