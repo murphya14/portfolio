@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-star-rating.js@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/star-rating.js/-/star-rating.js-3.1.5.tgz#4bc77610b1573641fdd0ecf9ac7fc94b617bb7a7"
-  integrity sha512-bUJQIU8Lkr0KoILNtTl9MXctUQcpUzM9ZScVovFiltOXeIK57R81CbfjCMp1rXA2KvXlruf10NzQgNRcgbwrTA==
+"star-rating.js@^3.1.5":
+  "integrity" "sha512-bUJQIU8Lkr0KoILNtTl9MXctUQcpUzM9ZScVovFiltOXeIK57R81CbfjCMp1rXA2KvXlruf10NzQgNRcgbwrTA=="
+  "resolved" "https://registry.npmjs.org/star-rating.js/-/star-rating.js-3.1.5.tgz"
+  "version" "3.1.5"
