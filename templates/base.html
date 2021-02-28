@@ -37,41 +37,35 @@
     <!-- Fixed masthead -->
     <!--Navbar-->
    <header>
-    <nav class=" font_custom custom-nav blue-gradient navbar-static-top navbar navbar-expand-lg navbar-dark scrolling-navbar">
+<br>
+<br>
+    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">portfolio</h6>
+    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Product Designs</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">You can find several product design by our professional team in
+      this section.</p>
+		
+    <!--First row-->
+    <div class="row">
 
-        <div class="container">
-        <div class="nav-hobby "> 
-                                    <!-- Logo -->
-        <h2><a class="text-left" href="{% url 'home' %}" target="_blank">
-          <img  class="img-fluid" width="150" height="100" src="" alt="">
-         </a>
-         <a class=" font_custom animated pulse font-weight-bold cyan-lighter-hover mb-3 navbar-brand white-text nav-hobby hover-shadow font-weight-bold fw-bolder title" href="{% url 'home' %}">Celtic Surf School <br> Spanish Point, Co.Clare</a></h2>
-        </div>
-            <button class="font_custom navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
-                aria-controls="navbarSupportedContent-7" aria-expanded="false"   aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                <ul class="navbar-nav mr-auto font_custom">
-      
-                    <li class="nav-item"><a class="nav-link white-darker-hover" href="{% url 'home' %}">Home</a></li>
-                                        <li class="white-darker-hover nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Surf Lessons
-                        </a>
-                        <div class="dropdown-menu category" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'rent' %}">Rent a board</a>
-                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'summer_course' %}">Summer courses</a>
-                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'weekend_course' %}">Weekend course</a>
-                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'groups' %}">Groups</a>
-                            <a class="dropdown-item category  waves-effect waves-light" href="{% url 'private_lessons' %}">Private/Advanced Lessons</a>
-                        </div>
-                    </li>
-                    <li class="nav-item white-darker-hover"><a class="nav-link " href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'contact' %}">Book</a></li>
-                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
-                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
-                    <li class="nav-item white-darker-hover"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+      <!--First column-->
+      <div class="col-12">
+
+        <!-- Nav tabs -->
+        <ul class="nav md-pills flex-center flex-wrap mx-0" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active font-weight-bold text-uppercase" href="{% url 'home' %}" role="tab">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" href="{% url 'about' %}" role="tab">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold text-uppercase" href="{% url 'contact' %}" role="tab">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+
 
                    <!-- {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"> My Profile</a></li>
@@ -89,19 +83,7 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
                     {% endif %} -->
 
-                </ul>
-                <form class="form-inline" action="{% url 'search' %}" method="get">
-                    <div class="md-form my-0">
-                    <p class="font-weight-bold text-warning font_custom">Follow us on:</p>
-                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="mx-1 text-white" role="button"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>    
+  
     </header>     
     <!-- Messages -->
     <section class="container font_custom">
@@ -146,23 +128,7 @@
     <footer class ="text-center font_custom">
         <div class="col-md-12 mb-4 text-center">
             <hr class="hr-light my-4 wow fadeInDown text-warning" data-wow-delay="0.4s">
-            <p class="font-weight-bold font_custom">Follow us on:</p>
-            <!--Facebook-->
-            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="mx-1 text-warning" role="button"><i class="fab fa-youtube"></i></a>
-        </div>
-        <!--Grid column-->
-        <!--Grid row-->
-        <!-- Content -->
-        <!--Section: Content-->
-        <section class="px-md-5 mx-md-5 py-5 text-center indigo-text font_custom">
-            <h3 class="black-text font_custom">Made with <i class="fas fa-heart red-text mx-1"></i> by Ais Designs</h3>
-        </section>
-        <!--Section: Content-->
-        <!-- Mask & flexbox options-->
-        <!-- Messages -->
+
     </footer>
     {% block head_js %}
         <!-- Bootstrap core JavaScript -->
