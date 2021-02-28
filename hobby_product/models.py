@@ -9,7 +9,7 @@ class hobby_product(models.Model):
     ARTS_AND_CRAFT = 'rent'
     MUSIC = 'course'
     GAMES = 'weekend'
-    COLLECTORS = 'groups'
+    COLLECTORS = 'project_one'
     ACADEMIC = 'private'
     NONE = 'school'
     CATEGORIES = (

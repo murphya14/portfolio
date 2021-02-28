@@ -56,37 +56,37 @@ def home(request):
     return render(request, 'home.html')
 
 # Create your views here.
-def rent(request):
+def project_three(request):
     """ Return rent page """
-    return render(request, 'rent.html')
+    return render(request, 'project_three.html')
 
 # Create your views here.
-def gallery(request):
+def project_six(request):
     """ Return rent page """
-    return render(request, 'gallery.html')
+    return render(request, 'project_six.html')
 
 
-def groups(request):
+def project_one(request):
     """ Return home page """
     #return redirect(reverse('home'))
-    return render(request, 'groups.html')
+    return render(request, 'project_one.html')
 
-def private_lessons(request):
+def project_two(request):
     """ Return home page """
     #return redirect(reverse('home'))
-    return render(request, 'private_lessons.html')
+    return render(request, 'project_two.html')
 
-def weekend_course(request):
+def project_five(request):
     """ Return home page """
     #return redirect(reverse('home'))
-    return render(request, 'weekend_course.html')
+    return render(request, 'project_five.html')
 
 
 
-def summer_course(request):
+def project_four(request):
     """ Return home page """
     #return redirect(reverse('home'))
-    return render(request, 'summer_course.html')
+    return render(request, 'project_four.html')
 
 def faq(request):
     """ Return home page """
