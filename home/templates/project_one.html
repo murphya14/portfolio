@@ -17,8 +17,8 @@
 
           <!--Image-->
           <div class="view overlay z-depth-1-half">
-            <img src="https://mdbootstrap.com/img/Photos/Others/img%20(16).jpg" class="img-fluid" alt="">
-            <a href="#">
+            <img src="{% static 'images/simonPNG.PNG' %}" class="img-fluid" alt="">
+            <a href="{% static 'images/simonPNG.PNG' %}" target="_blank" >
               <div class="mask rgba-white-light"></div>
             </a>
           </div>
@@ -29,13 +29,40 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4 mb-md-0 font_custom">
 
-          <h3 class="font-weight-bold font_custom">Groups <i class="fab fa-angellist ml-2"></i></h3>
+          <h3 class="font-weight-bold font_custom">Simon Says</h3>
 
-          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-            molestiae
-            numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+          <p class="text-muted">
+              View Simon Game website <a target="_blank" href="https://murphya14.github.io/Simon-game/">here!</a>
+<br><br>
+This is an interactive website created with JavaScript, HTML and CSS.<br><br>
+The purpose of this website is to provide a challenging and engaging memory game that allows for an energetic user interface and captures the attention of the player.
+This game can be implemented in a learning capacity in many ways, pontentially as starter task in order to 
+implement Gagne's 9 Events first step: gain attention.<br><br>
+To engage the user, I incorprated vivid colours and accompanied user actions with audio sounds. I also provided a detailed modal which contains an explaination of how to play. To maintain all users interest, there is the
+option of a more challenging game by using the "Strict Mode" setting. This allows the game to cater to all levels.<br>
+<br><br>
 
-          <a class="btn btn-outline-info font_custom" data-mdb-ripple-color="dark"  href="{% url 'contact' %}" role="button">Contact us!<i class="fas fa-phone ml-2"></i></a>
+
+In assessing the needs of the user, it was determined that as a player, I would like to:
+<ul>
+<li>see a striking design that is visually stimulating and provides an incentive to play the game.</li>
+<li>be able to access information so I can understand more about the game.</li>
+<li>be able to control the power button so I can experience the interactive nature of the game.</li>
+<li>be able to control the start button so as to begin when I am ready.</li>
+<li>be able to set a challenge level.</li>
+<li>be able to get instant feedback on whether I have lost/game over or gone ahead to the next level/win.</li>
+
+</ul> 
+<br>
+As part of designing the games, I created wireframes using <a href="https://balsamiq.com/">Balsamiq</a>
+<ul>
+<li><a target="_blank" href="{% static 'images/main-wireframe-desktop.pdf' %}">Wireframe</a></li>
+
+</ul>
+
+</p>
+
+          <a class="btn btn-outline-info font_custom" data-mdb-ripple-color="dark"  href="{% url 'home' %}" role="button">Back</i></a>
 
         </div>
         <!--Grid column-->
