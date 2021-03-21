@@ -14,10 +14,13 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4 mb-md-0">
 
-         <!--Image-->
-          <div class="view overlay z-depth-1-half">
-            <img src="{% static 'images/simonPNG.PNG' %}" class="img-fluid" alt="">
-            <a href="{% static 'images/simonPNG.PNG' %}" target="_blank" >
+         <!--Video-->
+          <div >
+            <video class="img-fluid"  controls>
+  <source src="{% static 'videos/return.mp4' %}"  type="video/mp4">
+    <a href="{% static 'videos/return.mp4' %}" target="_blank" ></a>
+    Your browser does not support the video tag.
+</video>
               <div class="mask rgba-white-light"></div>
             </a>
           </div>
@@ -28,39 +31,27 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4 mb-md-0 font_custom">
 
-          <h3 class="font-weight-bold font_custom">Simon Says</h3>
+          <h3 class="font-weight-bold font_custom">Return to work</h3>
 
-          <p class="text-muted">
-              View Simon Game website <a target="_blank" href="https://murphya14.github.io/Simon-game/">here!</a>
+        
 <br><br>
-This is an interactive website created with JavaScript, HTML and CSS.<br><br>
-The purpose of this website is to provide a challenging and engaging memory game that allows for an energetic user interface and captures the attention of the player.
-This game can be implemented in a learning capacity in many ways, pontentially as starter task in order to 
-implement Gagne's 9 Events first step: gain attention.<br><br>
-To engage the user, I incorprated vivid colours and accompanied user actions with audio sounds. I also provided a detailed modal which contains an explaination of how to play. To maintain all users interest, there is the
-option of a more challenging game by using the "Strict Mode" setting. This allows the game to cater to all levels.<br>
+This is a short course created with Adobe Captivate and Inkscape.<br><br>
+The purpose of this course is to provide an informative and re-assuring introduction to how a company plans on returning to work.<br><br>
+To engage the user, I incorprated vivid graphics and began with setting a brief foundation for the virus (clear definition.)<br>
 <br><br>
 
 
-In assessing the needs of the user, it was determined that as a player, I would like to:
+In assessing the needs of the learner, I would like to:
 <ul>
-<li>see a striking design that is visually stimulating and provides an incentive to play the game.</li>
-<li>be able to access information so I can understand more about the game.</li>
-<li>be able to control the power button so I can experience the interactive nature of the game.</li>
-<li>be able to control the start button so as to begin when I am ready.</li>
-<li>be able to set a challenge level.</li>
-<li>be able to get instant feedback on whether I have lost/game over or gone ahead to the next level/win.</li>
-
+<li>set a base understanding of the signs and symptons.</li>
+<li>make them aware of what measures the company is taking.</li>
+<li>asking for them to take active and individual respondsibilty and how this can be achieved.</li>
+<li>show the learner how their efforts have been appreciated over the pandemic.</li>
 </ul> 
 <br>
-As part of designing the game, I created wireframes using <a href="https://balsamiq.com/">Balsamiq</a>
-
-<ul>
-<li><a target="_blank" href="{% static 'images/main-wireframe-desktop.pdf' %}">Wireframe</a></li>
 
 </ul>
-The design was adapted to make the 40 year old game look more unique while maintaining parts of it's nostalgic image.
-</p>
+
 
           <a class="btn btn-outline-info font_custom" data-mdb-ripple-color="dark"  href="{% url 'home' %}" role="button">Back</i></a>
 
