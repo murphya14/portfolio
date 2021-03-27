@@ -25,7 +25,8 @@ body { padding-top: 0px;
     min-height: 100vh;
     background-color: #ffffff;
     width: 100%;
-    font-size: 14px;}
+    font-size: 14px;
+font-family: 'Source Sans Pro', sans-serif;}
 
 .carousel-image {height: 400px;}
 
@@ -38,7 +39,7 @@ body { padding-top: 0px;
     body { padding-top: 0px;}
    .mobile {margin-left: 5px!important;
     margin-right: 0!important;}
-    .font_custom {font-family: 'Shippori Mincho B1', serif;}
+
 }
 
 
@@ -93,3 +94,4 @@ height: 300px;
  max-width: 250px;
  max-height: 250px;
 }
+
