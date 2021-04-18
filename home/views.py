@@ -110,4 +110,10 @@ def about(request):
 
     return render(request, 'about.html')
 
+    
+def portfolio(request):
+    """ Return about.html """
+
+    return render(request, 'portfolio.html')
+
 

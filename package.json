@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "star-rating.js": "^3.1.5"
+    "star-rating.js": "^3.1.5",
+    "startbootstrap-scrolling-nav": "^4.2.3"
   }
 }

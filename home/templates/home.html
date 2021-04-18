@@ -2,233 +2,50 @@
 {% load staticfiles %} 
 {% block content %}
 
-
-  <div class="container my-5">
-
-  <!-- Section -->
-  <section>
-    
-    <style>
-      .md-pills .nav-link.active {
-        color: #fff;
-        background-color: #616161;
-      }
-      button.close {
-        position: absolute;
-        right: 0;
-        z-index: 2;
-        padding-right: 1rem;
-        padding-top: .6rem;
-      }
-    </style>
-    
- 
-      <!--First column-->
-
-    <!--First row-->
-
-    <!--Tab panels-->
-    <div class="tab-content mb-5">
-
-      <!--Panel 1-->
-      <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-12 col-lg-4">
-
-       <!-- Card -->
-            <a class="card hoverable mb-4" href = "{% url 'project_five' %}">
-
-              <!-- Card image -->
-              <img class="card-img-top object-fit_contain" src="{% static 'images/covid.PNG' %}" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">Return to work</h5>
-                <p class="card-text text-uppercase mb-3">Abobe Captivate & Inkscape</p>
-
-              </div>
-
-            </a>
-            <!-- Card -->
-
-                     <!-- Card -->
-            <a class="card hoverable mb-4 container " href = "{% url 'project_three' %}">
-
-              <!-- Card image -->
-              <img class="card-img-top object-fit_contain " src="{% static 'images/celtic.PNG' %}" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">E-Commerce Website</h5>
-                <p class="card-text text-uppercase mb-3">Django, Python, HTML, CSS & JavaScript</p>
-
-              </div>
-
-            </a>
-            <!-- Card -->
-
-         
-
-
-         
-            <!-- Card -->
-
-
-            
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-4">
-
-               <!-- Card -->
-            <a class="container card hoverable mb-4" href = "{% url 'project_one' %}">
-
-              <!-- Card image -->
-              <img class="card-img-top" src="{% static 'images/finals.PNG' %}" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">Gamification</h5>
-                <p class="card-text text-uppercase mb-3">JavaScript, HTML, CSS</p>
-
-              </div>
-
-            </a>
-
-               <!-- Card -->
-            <a class="card hoverable mb-4" href = "{% url 'project_two' %}">
-
-              <!-- Card image -->
-              <img class="card-img-top" src="{% static 'images/HH.PNG' %}" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">E-Commerce Website</h5>
-                <p class="card-text text-uppercase mb-3">Django, Python, HTML, CSS & JavaScript</p>
-
-              </div>
-
-            </a>
-            <!-- Card -->
-
-
-           
-
-          </div>
-          <!-- Grid column -->
-
-          
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-4">
-
-           
-
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </div>
-      <!--Panel 2-->
-
-      <!--Panel 3-->
-      <div class="tab-pane fade" id="panel33" role="tabpanel">
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-12 col-lg-4">
-
-            <!-- Card -->
-            <div class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">Phone Bag</h5>
-                <p class="card-text text-uppercase mb-3">Bag, Box</p>
-
-              </div>
-
-            </div>
-            <!-- Card -->
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-4">
-
-            <!-- Card -->
-            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <img class="card-img-top" src="{% static 'images/covid.PNG' %}" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">Notes</h5>
-                <p class="card-text text-uppercase mb-3">Note</p>
-
-              </div>
-
-            </a>
-            <!-- Card -->
-
-          </div>
-          <!-- Grid column -->
-
-     <!-- Grid column -->
-          <div class="col-md-6 col-lg-4">
-
-            <!-- Card -->
-            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
-
-              <!-- Card image -->
-              <img class="card-img-top" src="{% static 'images/covid.PNG' %}" alt="Card image cap">
-
-              <!-- Card content -->
-              <div class="card-body">
-
-                <h5 class="my-3">Notes</h5>
-                <p class="card-text text-uppercase mb-3">Note</p>
-
-              </div>
-
-            </a>
-            <!-- Card -->
-
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </div>
-      <!--Panel 3-->
-
-    </div>
-    <!--Tab panels-->
-
-  </section>
-  <!-- Section -->
-
+<!-- Jumbotron -->
+
+<div id = "bg"
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+  style="background-image: url('/static/images/lightbulb.jpg');">
+
+  <h1 class="mb-3 h2">Jumbotron</h1>
+
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+    labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+    neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+  </p>
 </div>
+<!-- Jumbotron -->
+
+
+ 
 
 {% endblock %}
