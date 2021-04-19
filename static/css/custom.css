@@ -15,6 +15,7 @@
     white-space: nowrap;
 }
 
+
 .title {
     font-weight: 900;
 }
@@ -134,3 +135,17 @@ img.bg {
   height: 70%;
   overflow: hidden;
 }
+
+.nav_font_pink {
+    color: #EF829B;
+}
+
+.main_color {
+    background-color: #9e9e9e !important;
+}
+
+.footer_color {
+    background-color: #EF829B !important;
+}
+
+.project {background-color: white !important;}
