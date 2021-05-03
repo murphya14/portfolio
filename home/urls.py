@@ -1,11 +1,12 @@
 from django.conf.urls import url, include                                                                                                                                                                                                                                     
-from .views import not_found, server_error, home, about, contact, faq, project_four, project_five, project_one, project_two, project_three, project_six, portfolio
+from .views import not_found, server_error, home, about, contact, faq, project_four, project_five, project_one, project_two, project_three, project_six, portfolio, resume
 
 urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^about/', about, name='about'),
     url(r'^contact/', contact, name='contact'),
     url(r'^faq/', faq, name='faq'),
+    url(r'^resume/', resume, name='resume'),
     url(r'^project_four/', project_four, name='project_four'),
     url(r'^project_five/', project_five, name='project_five'),
     url(r'^project_one/', project_one, name='project_one'),

@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from home.forms import ContactForm
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
+from django.http import FileResponse, Http404
 
 
 
@@ -92,6 +93,14 @@ def faq(request):
     """ Return home page """
     #return redirect(reverse('home'))
     return render(request, 'faq.html')
+
+def resume(request):
+    """ Return home page """
+    try:
+        return FileResponse(open('{% static "images/cvportfolio.pdf" %}', 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        pass
+    return render(request, 'resume.html')
 
 
 def not_found(request):
